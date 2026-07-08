@@ -1,0 +1,289 @@
+PHASE 1: PYTHON BASIC  (Foundation)
+
+Python Introduction
+→ What is Python
+→ Features of Python
+→ Applications of Python
+Installation & Setup
+→ Python Installation
+→ VS Code Setup
+→ Running Python Programs
+Basic Syntax
+→ Variables
+→ Data Types
+→ Type Conversion
+→ Input/Output
+→ Comments
+Operators
+→ Arithmetic
+→ Assignment
+→ Comparison
+→ Logical
+→ Bitwise
+→ Membership
+→ Identity
+Control Statements
+→ if
+→ if-else
+→ elif
+→ Nested if
+Loops
+→ for loop
+→ while loop
+→ break
+→ continue
+→ pass
+Strings
+→ String Methods
+→ Slicing
+→ Formatting
+→ f-strings
+
+PHASE 2: PYTHON INTERMEDIATE
+
+Collections
+→ List
+→ Tuple
+→ Set
+→ Dictionary
+Functions
+→ Function Definition
+→ Parameters
+→ Return Statement
+→ Recursion
+→ Lambda Functions
+Modules & Packages
+→ Import
+→ Custom Modules
+→ Built-in Modules
+Exception Handling
+→ try
+→ except
+→ else
+→ finally
+→ raise
+File Handling
+→ Read Files
+→ Write Files
+→ Append Files
+→ CSV Files
+OOP (Very Important)
+→ Class
+→ Object
+→ Constructor
+→ Inheritance
+→ Polymorphism
+→ Encapsulation
+→ Abstraction
+Advanced OOP
+→ Method Overriding
+→ Method Resolution Order
+→ Static Method
+→ Class Method
+
+PHASE 3: ADVANCED PYTHON
+
+→ Iterators
+→ Generators
+→ Decorators
+→ Closures
+→ Regular Expressions (Regex)
+→ Date and Time
+→ Collections Module
+→ OS Module
+→ Sys Module
+→ Math Module
+→ JSON
+→ Multithreading
+→ Multiprocessing
+→ Async Programming
+→ Virtual Environment
+→ Pip Package Manager
+
+PHASE 4: DSA WITH PYTHON
+
+Time & Space Complexity
+→ Big O Notation
+→ Big Omega
+→ Big Theta
+Arrays
+→ Traversal
+→ Searching
+→ Insertion
+→ Deletion
+Searching Algorithms
+→ Linear Search
+→ Binary Search
+Sorting Algorithms
+→ Bubble Sort
+→ Selection Sort
+→ Insertion Sort
+→ Merge Sort
+→ Quick Sort
+→ Heap Sort
+Recursion
+→ Basic Recursion
+→ Backtracking
+Linked List
+→ Singly Linked List
+→ Doubly Linked List
+→ Circular Linked List
+Stack
+→ Stack Implementation
+→ Applications
+Queue
+→ Simple Queue
+→ Circular Queue
+→ Priority Queue
+→ Deque
+Hashing
+→ Hash Table
+→ Dictionary Internals
+Trees
+→ Binary Tree
+→ BST
+→ AVL Tree
+→ Heap
+Graphs
+→ BFS
+→ DFS
+→ Dijkstra
+→ Floyd Warshall
+Advanced DSA
+→ Greedy Algorithms
+→ Dynamic Programming
+→ Divide and Conquer
+→ Backtracking
+
+PHASE 5: SQL (Must Learn)
+
+→ Database Basics
+→ MySQL/PostgreSQL
+→ CRUD
+→ Joins
+→ Group By
+→ Having
+→ Subqueries
+→ Views
+→ Indexes
+
+PHASE 6: DATA ANALYSIS
+
+NumPy
+→ Arrays
+→ Indexing
+→ Broadcasting
+→ Vectorization
+Pandas
+→ Series
+→ DataFrame
+→ Data Cleaning
+→ Missing Values
+→ GroupBy
+→ Merge
+Data Visualization
+Matplotlib
+→ Line Plot
+→ Bar Chart
+→ Histogram
+→ Pie Chart
+Seaborn
+→ Heatmap
+→ Pairplot
+→ Distribution Plot
+
+PHASE 7: STATISTICS & MATHEMATICS
+
+Mathematics
+→ Linear Algebra
+→ Vectors
+→ Matrices
+Calculus
+→ Derivatives
+→ Gradients
+Statistics
+→ Mean
+→ Median
+→ Mode
+→ Variance
+→ Standard Deviation
+→ Probability
+→ Hypothesis Testing
+
+PHASE 8: MACHINE LEARNING
+
+Scikit-Learn
+→ Data Preprocessing
+→ Train-Test Split
+→ Feature Engineering
+Supervised Learning
+→ Linear Regression
+→ Logistic Regression
+→ Decision Tree
+→ Random Forest
+→ SVM
+→ KNN
+→ Naive Bayes
+Unsupervised Learning
+→ K-Means
+→ PCA
+→ Hierarchical Clustering
+Model Evaluation
+→ Accuracy
+→ Precision
+→ Recall
+→ F1 Score
+→ Confusion Matrix
+
+PHASE 9: DEEP LEARNING
+
+TensorFlow / Keras
+→ Neural Networks
+→ Activation Functions
+→ Loss Functions
+→ Optimizers
+Deep Learning Topics
+→ ANN
+→ CNN
+→ RNN
+→ LSTM
+→ GRU
+
+PHASE 10: AI & GENERATIVE AI
+
+→ NLP Basics
+→ Text Processing
+→ Tokenization
+→ Word Embeddings
+Transformers
+→ Attention Mechanism
+→ Transformer Architecture
+→ BERT
+→ GPT
+LLMs
+→ Prompt Engineering
+→ Fine Tuning
+→ RAG
+→ Embeddings
+→ Vector Databases
+→ LangChain
+→ AI Agents
+
+Final Learning Order
+Python Basics
+→ Intermediate Python
+→ OOP
+→ Advanced Python
+→ DSA
+→ SQL
+→ NumPy
+→ Pandas
+→ Matplotlib
+→ Seaborn
+→ Statistics + Math
+→ Machine Learning
+→ Deep Learning
+→ NLP
+→ Generative AI
+→ AI Agents
+→ Real Projects
