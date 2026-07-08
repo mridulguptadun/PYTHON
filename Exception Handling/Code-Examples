@@ -1,0 +1,247 @@
+1) Handle Division by Zero
+    try:
+        num1 = int(input("Enter First Number: "))
+        num2 = int(input("Enter Second Number: "))
+        result = num1 / num2
+        print("Result =", result)
+    
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero.")
+
+O/P : Enter First Number: 20
+      Enter Second Number: 5
+      Result = 4.0
+
+---------------------------------------------------------
+2) Handle Invalid Integer Input
+    try:
+        age = int(input("Enter Age: "))
+        print("Age =", age)
+    
+    except ValueError:
+        print("Please enter a valid integer.")
+
+O/P : Enter Age: twenty
+      Please enter a valid integer.
+
+----------------------------------------------------------
+3) Multiple Exceptions
+    try:
+        num = int(input("Enter a number: "))
+        result = 100 / num
+    
+    except ZeroDivisionError:
+        print("Cannot divide by zero!")
+    
+    except ValueError:
+        print("Please enter a valid integer!")
+    
+    else:
+        print("Result =", result)
+    
+    finally:
+        print("Program Finished.")
+
+O/P : Enter a number: 5     Enter a number: 0
+      Result = 20.0         Cannot divide by zero!
+      Program Finished.     Program Finished.
+
+----------------------------------------------------------
+4) File Handling Exception
+    try:
+        file = open("student.txt", "r")
+        print(file.read())
+    
+    except FileNotFoundError:
+        print("File does not exist!")
+    
+    finally:
+        print("Closing program.")
+
+O/P : File does not exist!
+      Closing program.
+
+-----------------------------------------------------------
+5) Nested Try-Except
+    try:
+        numbers = [10, 20, 30]
+    
+        try:
+            index = int(input("Enter index: "))
+            print(numbers[index])
+    
+        except IndexError:
+            print("Invalid Index!")
+    
+    except ValueError:
+        print("Invalid Input!")
+
+O/P : Enter index: 5
+      Invalid Index!
+
+-------------------------------------------------------------
+6) Raise Custom Exception
+    balance = 5000
+    try:
+        amount = int(input("Enter withdrawal amount: "))
+    
+        if amount > balance:
+            raise Exception("Insufficient Balance")
+    
+        balance -= amount
+        print("Remaining Balance:", balance)
+    
+    except Exception as e:
+        print(e)
+
+O/P : Enter withdrawal amount: 7000
+      Insufficient Balance
+
+--------------------------------------------------------------
+7) Custom Exception Class
+    class AgeError(Exception):
+        pass
+
+    age = int(input("Enter your age: "))    
+    try:
+        if age < 18:
+            raise AgeError("You are not eligible to vote.")
+    
+        print("You can vote.")
+    
+    except AgeError as e:
+        print(e)
+
+O/P : Enter your age: 15
+      You are not eligible to vote.
+
+---------------------------------------------------------------
+8) Multiple Exceptions in One Block
+    try:
+        numbers = [5, 10, 15]
+    
+        num = int(input("Enter number: "))
+        print(numbers[num] / num)
+    
+    except (ValueError, IndexError, ZeroDivisionError) as e:
+        print("Error:", e)
+
+O/P : Enter number: 0
+      Error: division by zero
+
+----------------------------------------------------------------
+9) Login System (Intermediate)
+    username = "admin"
+    password = "python123"
+    
+    try:
+        u = input("Username: ")
+        p = input("Password: ") 
+        if u != username or p != password:
+            raise ValueError("Invalid Username or Password")   
+        print("Login Successful")
+    
+    except ValueError as e:
+        print(e)
+
+O/P : Username: admin
+      Password: abc123
+      Invalid Username or Password
+
+----------------------------------------------------------------
+10) ATM Program (Intermediate)
+    balance = 10000
+    try:
+        amount = int(input("Enter withdrawal amount: "))
+    
+        if amount <= 0:
+            raise ValueError("Amount must be greater than zero.")
+    
+        if amount > balance:
+            raise Exception("Insufficient Balance")
+    
+        balance -= amount
+    
+        print("Transaction Successful")
+        print("Remaining Balance:", balance)
+    
+    except ValueError as e:
+        print(e)
+    
+    except Exception as e:
+        print(e)
+    
+    finally:
+        print("Thank you for using our ATM.")
+
+O/P : Enter withdrawal amount: 12000
+      Insufficient Balance
+      Thank you for using our ATM.
+
+------------------------------------------------------------------
+11) Student Marks Validation
+    try:
+        marks = int(input("Enter marks (0-100): "))
+    
+        if marks < 0 or marks > 100:
+            raise ValueError("Marks should be between 0 and 100.")
+    
+        print("Marks Accepted")
+    
+    except ValueError as e:
+        print(e)
+
+O/P : Enter marks (0-100): 120
+      Marks should be between 0 and 100.
+
+------------------------------------------------------------------
+12) Dictionary Lookup
+    students = {
+        "Aman": 85,
+        "Riya": 92,
+        "Rahul": 76
+    }    
+    try:
+        name = input("Enter student name: ")
+        print("Marks:", students[name])
+    
+    except KeyError:
+        print("Student not found.")
+
+O/P : Enter student name: Mohan
+      Student not found.
+
+-------------------------------------------------------------------
+13) Interview-Level Example
+class InsufficientBalanceError(Exception):
+    pass
+
+class BankAccount:
+
+    def __init__(self, balance):
+        self.balance = balance
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise InsufficientBalanceError("Insufficient Balance")
+
+        self.balance -= amount
+        return self.balance
+
+account = BankAccount(10000)
+try:
+    amount = int(input("Enter amount: "))
+    remaining = account.withdraw(amount)
+
+    print("Remaining Balance:", remaining)
+
+except InsufficientBalanceError as e:
+    print(e)
+
+except ValueError:
+    print("Please enter a valid number.")
+
+O/P : Enter amount: 15000
+      Insufficient Balance
+
+-----------------------------------------------------------------------
