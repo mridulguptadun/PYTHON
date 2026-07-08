@@ -1,0 +1,269 @@
+=========================
+| What is an Exception? |
+=========================
+An Exception is an event that occurs during the execution of a program and interrupts the normal flow of the program.
+
+a = 10
+b = 0
+print(a / b)
+
+o/p : ZeroDivisionError: division by zero
+
+===============================
+| What is Exception Handling? |
+===============================
+Exception Handling is the process of detecting, catching, and handling runtime errors so that the program can continue executing normally.
+
+------------------------------
+| Without Exception Handling |
+------------------------------
+num = int(input("Enter Number : "))
+print(100 / num)
+print("Program End")
+o/p : ZeroDivisionError
+
+---------------------------
+| With Exception Handling |
+---------------------------
+try:
+    num = int(input("Enter Number : "))
+    print(100 / num)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+print("Program End")
+o/p : Cannot divide by zero
+
+Exception vs Error
+_______________________________________________________________
+| Error                     | Exception                       |
+| ------------------------- | ------------------------------- |
+| Serious problem           | Runtime problem                 |
+| Mostly programmer mistake | Can be handled                  |
+| Stops program             | Can be handled using try-except |
+_______________________________________________________________
+
+Common Python Exceptions
+________________________________________________
+| Exception           | Reason                 |
+| ------------------- | ---------------------- |
+| ZeroDivisionError   | Divide by zero         | print(a / b)
+| ValueError          | Wrong value            | num = int("Hello")
+| TypeError           | Wrong data type        | print("10" + 10)
+| NameError           | Variable not found     | print(age)
+| IndexError          | Invalid index          | numbers = [10,20,30] print(numbers[5])
+| KeyError            | Dictionary key missing | student = {"name":"Rahul"} print(student["age"]) 
+| FileNotFoundError   | File not found         | file = open("abc.txt")
+| ImportError         | Import failed          |
+| AttributeError      | Invalid attribute      |
+| ModuleNotFoundError | Module missing         |
+________________________________________________
+
+==============
+| try Block? |
+==============
+The try block contains the code that may raise an exception.
+
+=================
+| except Block? |
+=================
+The except block catches and handles the exception raised in the try block.
+
+try:
+    print(10 / 0)
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
+
+o/p: Division by zero is not allowed
+
+----------------
+| Flow Diagram |
+----------------
+Start
+↓
+try Block
+↓
+Error?
+↓
+Yes → except Block
+↓
+No
+↓
+Program Continue
+
+--------------------------
+| Multiple Except Blocks |
+--------------------------
+try:
+    num = int(input())
+    print(10 / num)
+
+except ValueError:
+    print("Invalid Number")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+--------------------------------------
+| One Except for Multiple Exceptions |
+--------------------------------------
+try:
+    num = int(input())
+    print(10 / num)
+
+except (ValueError, ZeroDivisionError):
+    print("Something went wrong")
+
+---------------------
+| Generic Exception |
+---------------------
+try:
+    num = int(input())
+    print(10 / num)
+
+except Exception:
+    print("Some Error Occurred")
+
+-------------------------
+| Getting Error Message |
+-------------------------
+try:
+    print(10 / 0)
+except Exception as e:
+    print(e)
+
+e = e is exception obj which hold error details
+o/p: division by zero
+
+===============
+| else Block? |
+===============
+The else block executes only if no exception occurs in the try block.
+
+try:
+    risky code
+except:
+    handle error
+else:
+    execute if no error
+-----------------------------------
+try:
+    num = int(input())
+except ValueError:
+    print("Invalid Input")
+else:
+    print("Square =", num ** 2)
+
+i/p : num = 5 o/p square = 25
+i/p : num = abc o/p Invalid Input
+
+==================
+| finally Block? |
+==================
+The finally block always executes whether an exception occurs or not.
+
+try:
+    print(10 / 2)
+except ZeroDivisionError:
+    print("Error")
+finally:
+    print("Program Finished")
+
+o/p : 5 <-> Program Finished
+-----------------------------
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("Program Finished")
+
+o/p : Cannot divide by zero <-> Program Finished
+
+----------------------
+| Complete Structure |
+----------------------
+try:
+    num = int(input("Enter Number: "))
+    result = 100 / num
+except ValueError:
+    print("Please enter a valid integer.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+else:
+    print("Result =", result)
+
+finally:
+    print("Execution Completed.")
+
+====================
+| raise Statement? |
+====================
+The raise statement is used to manually raise an exception.
+
+age = 15
+if age < 18:
+    raise ValueError("Age must be at least 18.")
+
+o/p : ValueError: Age must be at least 18.
+
+=====================
+| Custom Exceptions |
+=====================
+class InvalidAgeError(Exception):
+    pass
+age = 16
+if age < 18:
+    raise InvalidAgeError("You are not eligible.")
+
+=====================
+| Nested try-except |
+=====================
+try:
+    print("Outer Try")
+    try:
+        print(10 / 0)
+    except ZeroDivisionError:
+        print("Inner Exception Handled")
+except Exception:
+    print("Outer Exception")
+
+O/P: Outer Try
+     Inner Exception Handled
+
+===========================================================================================================================================
+| Interview Questions |
+=======================
+1. What is an Exception?
+An exception is an event that interrupts the normal execution of a program during runtime.
+
+2. What is Exception Handling?
+It is the process of catching and handling runtime exceptions to prevent program crashes.
+
+3. Difference between Error and Exception?
+Errors are generally serious issues and often cannot be recovered from, whereas exceptions are runtime problems that can be caught and handled.
+
+4. What is the use of try?
+It contains code that may raise an exception.
+
+5. What is the use of except?
+It catches and handles exceptions raised in the try block.
+
+6. When does else execute?
+Only when the try block completes without any exception.
+
+7. When does finally execute?
+Always, regardless of whether an exception occurs or not.
+
+8. What is raise used for?
+To manually raise an exception.
+
+9. Why use custom exceptions?
+To represent application-specific error conditions in a clear and organized way.
+
+10. Why is except Exception usually written last?
+Because it catches almost all standard exceptions. If it is written before specific exceptions, those specific handlers may never execute.
+===================================================================================================================================================
+
