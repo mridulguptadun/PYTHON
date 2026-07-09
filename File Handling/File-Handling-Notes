@@ -1,0 +1,126 @@
+========================
+| Python File Handling |
+========================
+-> File Handling is the process of creating, opening, reading, writing, appending, updating, and deleting files using Python.
+-> File Handling allows a Python program to store data permanently inside files instead of keeping it only in memory.
+
+===================
+| What is a File? | -> A file is a collection of data stored permanently on a storage device.
+===================
+photo.jpg
+video.mp4
+song.mp3
+data.csv
+student.json
+database.db
+report.pdf
+
+===================
+| File Operations |
+===================
+Create
+Open
+Read
+Write
+Append
+Update
+Close
+Delete
+Rename
+
+==========
+| open() | -> The open() function is used to open a file and returns a file object.
+==========
+file = open(filename, mode)
+file = open("data.txt", "r")  # Mode r => Read
+
+=========
+| Modes |
+=========
+r => Read Mode -> Opens the file for reading only.
+w => Write Mode -> Opens the file for writing. If the file exists, its contents are erased. If it does not exist, a new file is created.
+a => Append Mode -> Opens the file for writing without deleting the existing content. New data is added at the end of the file.
+x => Exclusive Create -> Creates a new file. Raises an error if the file already exists.
+t => Text Mode -> Default mode. (rt,t,r  same)
+b => Binary Mode -> image, video, audio
++ => Plus Mode -> Red + Write (r+, w+, a+)
+
+==========
+| read() |  -> Reads the contents of a file.
+==========
+file = open("data.txt", "r")
+print(file.read())
+
+==============
+| read(size) |
+==============
+file = open("data.txt","r")
+print(file.read(3))
+
+==============
+| readline() | -> Reads one line at a time.
+==============
+file = open("fruit.txt","r")
+print(file.readline())
+print(file.readline())
+
+===============
+| readlines() | -> Reads all lines and returns them as a list.
+===============
+file = open("fruit.txt","r")
+print(file.readlines())
+
+O/P : ['Apple\n', 'Banana\n', 'Orange']  # Return a List
+
+===========
+| write() | -> Writes data into a file.
+===========
+file = open("student.txt","w")
+file.write("Hello")
+
+================
+| writelines() | -> Writes multiple strings from a list to a file.
+================
+file = open("student.txt","w")
+data = [
+    "Python\n",
+    "Java\n",
+    "C++\n"
+]
+file.writelines(data)
+
+===========
+| close() | -> Closes the file and releases the system resources.
+===========
+file = open("student.txt", "r")
+print(file.read())
+file.close()
+
+================================
+| with Statement (Recommended) | -> The with statement automatically closes the file after the block of code finishes, even if an error occurs.
+================================
+with open("student.txt", "r") as file:
+    print(file.read())
+
+=================
+| Summary Table |
+=================
+_______________________________________________________
+| Method / Mode  | Purpose                            |
+| -------------- | ---------------------------------- |
+| `open()`       | Open a file                        |
+| `close()`      | Close the file                     |
+| `read()`       | Read entire file                   |
+| `read(size)`   | Read fixed number of characters    |
+| `readline()`   | Read one line                      |
+| `readlines()`  | Read all lines into a list         |
+| `write()`      | Write a string                     |
+| `writelines()` | Write multiple strings             |
+| `"r"`          | Read only                          |
+| `"w"`          | Write (overwrite existing content) |
+| `"a"`          | Append to the end                  |
+| `"x"`          | Create a new file only             |
+| `"b"`          | Binary mode                        |
+| `"t"`          | Text mode (default)                |
+| `"+"`          | Read and write together            |
+_______________________________________________________
