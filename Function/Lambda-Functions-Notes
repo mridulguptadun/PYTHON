@@ -8,7 +8,7 @@ A lambda function is an anonymous (nameless) function used for writing short, on
 
 Syntax
   lambda arguments: expression
--------------------------------------------
+
 Arguments
      │
      ▼
@@ -16,7 +16,6 @@ Expression Execute
      │
      ▼
 Result Automatically Return
--------------------------------------------
 
 square = lambda x: x * x
 print(square(5))
@@ -53,10 +52,120 @@ _____________________________
 greater = lambda a, b: a if a > b else b
 print(greater(15, 30))
 O/P : 30
+_____________________________
 
 total = lambda a, b, c: a + b + c
 print(total(10, 20, 30))
 O/P : 60
+
+============================
+| map() Function in Python |
+============================
+👉 map() is a built-in Python function that applies a given function to every item of an iterable (such as a list, tuple, or set) 
+   and returns a map object containing the transformed values.
+
+👉 The map() function applies a function to each element of an iterable and returns the modified results.
+
+# map() Built-in Python function
+
+map(function, iterable)   
+
+How map() Works
+List
+ │
+ ▼
+Take First Element
+ │
+ ▼
+Apply Function
+ │
+ ▼
+Store Result
+ │
+ ▼
+Take Second Element
+ │
+ ▼
+Apply Function
+ │
+ ▼
+Store Result
+ │
+ ▼
+Continue until end
+
+Example 1 (Using Normal Function)
+    def square(x):
+        return x * x
+    numbers = [1, 2, 3, 4]
+    result = map(square, numbers)
+    print(result)
+
+Example 2 (Using Lambda)
+    numbers = [1, 2, 3, 4]
+    result = map(lambda x: x * x, numbers)
+    print(list(result))
+
+O/P : [1, 4, 9, 16]
+
+Example 3 (Add 10)
+    numbers = [5, 10, 15, 20]
+    result = map(lambda x: x + 10, numbers)
+    print(list(result))
+
+O/P : [15, 20, 25, 30]
+
+Example 4 (Convert into Uppercase)
+    names = ["mridul", "aman", "rohan"]
+    result = map(lambda name: name.upper(), names)
+    print(list(result))
+
+O/P : ['MRIDUL', 'AMAN', 'ROHAN']
+
+Example 5 (Length of Strings)
+    names = ["Python", "Java", "AI"]
+    result = map(len, names)
+    print(list(result))
+
+O/P : [6, 4, 2]
+
+Example 6 (Multiple Iterables)
+    a = [1, 2, 3]
+    b = [10, 20, 30]
+    result = map(lambda x, y: x + y, a, b)
+    print(list(result))
+
+O/P : [11, 22, 33]
+
+
+_________________________________________________________________________________________________________________________________
+==============
+| Advantages |
+==============
+👉 Less code.
+👉 Faster to write for simple transformations.
+👉 Works well with lambda.
+👉 Supports multiple iterables.
+👉 Returns a memory-efficient iterator.
+
+=================
+| Disadvantages |
+=================
+👉 Can be less readable for complex logic.
+👉 For complicated operations, a normal for loop or def function is often easier to understand.
+
+Interview Questions
+Q1. What is map() in Python?
+Answer: map() is a built-in function that applies a function to every element of one or more iterables and returns a map object (iterator).
+
+Q2. What does map() return?
+Answer: It returns a map object, which is an iterator. To see the values, convert it using list(), tuple(), or iterate over it.
+
+Q3. Can map() work with multiple iterables?
+Answer: Yes. It processes corresponding elements from each iterable and stops when the shortest iterable ends.
+
+Q4. Can map() be used without lambda?
+Answer: Yes. You can pass any callable, such as a normal function (def) or built-in functions like len or str.upper.
 
 
 
