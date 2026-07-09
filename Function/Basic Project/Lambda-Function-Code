@@ -1,0 +1,71 @@
+1. Simple Lambda (Beginner)
+    square = lambda x: x * x
+    print(square(5))
+O/P: 25
+
+2. Addition
+    add = lambda a, b: a + b
+    print(add(10, 20))
+O/P : 30
+
+3. Three Numbers
+    total = lambda a, b, c: a + b + c
+    print(total(10, 20, 30))
+O/P : 60
+
+4. Even or Odd
+    check = lambda x: "Even" if x % 2 == 0 else "Odd"
+    print(check(8))
+    print(check(7))
+O/P : Even or Odd
+
+5. Maximum Number
+    maximum = lambda a, b: a if a > b else b
+    print(maximum(10, 25))
+O/P : 25
+
+6. String Uppercase
+    upper = lambda name: name.upper()
+    print(upper("mridul"))
+O/P : MRIDUL
+
+7. String Length
+    length = lambda text: len(text)
+    print(length("Python"))
+O/P : 6
+
+8. List Sorting (Intermediate)
+    students = [
+        ("Rahul", 80),
+        ("Amit", 95),
+        ("Neha", 88)
+    ]
+    students.sort(key=lambda student: student[1])
+    print(students)
+O/P : [
+      ('Rahul',80),
+      ('Neha',88),
+      ('Amit',95)
+      ]
+
+9. Sorting by Name
+    students = [
+        ("Rahul", 80),
+        ("Amit", 95),
+        ("Neha", 88)
+    ]
+    students.sort(key=lambda student: student[0])
+    print(students)
+O/P : [
+      ('Amit',95),
+      ('Neha',88),
+      ('Rahul',80)
+      ]
+
+17. Multiple Conditions
+    check = lambda age: "Adult" if age >= 18 else "Minor"
+    print(check(20))
+    print(check(15))
+O/P : Adult
+      Minor
+
