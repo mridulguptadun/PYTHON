@@ -1,1 +1,159 @@
+1) Count Lines, Words, Characters
+    lines = 0
+    words = 0
+    characters = 0
+    
+    with open("data.txt", "r") as file:    
+        for line in file:
+            lines += 1
+            words += len(line.split())
+            characters += len(line)   
+    print("Lines :", lines)
+    print("Words :", words)
+    print("Characters :", characters)
+
+2) Search a Word in File
+    word = input("Enter word : ")
+    with open("story.txt", "r") as file:
+        for number, line in enumerate(file, start=1):
+            if word.lower() in line.lower():
+                print(f"Found in line {number}")
+                print(line.strip())
+
+3) Copy One File to Another
+    with open("source.txt", "r") as source:
+        with open("destination.txt", "w") as destination:
+            for line in source:
+                destination.write(line)
+    print("Copied Successfully")
+
+4) Remove Blank Lines
+    with open("input.txt", "r") as file:
+        lines = file.readlines()
+    with open("output.txt", "w") as file:
+        for line in lines:
+            if line.strip() != "":
+                file.write(line)
+
+5) Count Frequency of Every Word
+    frequency = {}
+    with open("story.txt", "r") as file:
+        for line in file:
+            words = line.lower().split()
+            for word in words:
+                frequency[word] = frequency.get(word, 0) + 1
+    print(frequency)
+
+6) Find Longest Line
+    longest = ""
+    with open("data.txt", "r") as file:
+        for line in file:
+            if len(line) > len(longest):
+                longest = line
+    print(longest)
+
+7) Merge Multiple Files
+    files = ["a.txt", "b.txt", "c.txt"]
+    with open("final.txt", "w") as output:
+        for filename in files:
+            with open(filename, "r") as file:
+                output.write(file.read())
+                output.write("\n")
+
+8) Read CSV Without csv Module
+    with open("students.txt", "r") as file:
+        for line in file:
+            name, marks = line.strip().split(",")
+            print(name)
+            print(int(marks))
+
+9) Replace Word in File
+    with open("data.txt", "r") as file:
+        text = file.read()
+    text = text.replace("Python", "Java")
+    with open("data.txt", "w") as file:
+        file.write(text)
+
+10) Log File Analyzer
+    info = 0
+    error = 0
+    warning = 0
+    with open("log.txt", "r") as file:
+        for line in file:
+            if line.startswith("INFO"):
+                info += 1
+    
+            elif line.startswith("ERROR"):
+                error += 1
+    
+            elif line.startswith("WARNING"):
+                warning += 1
+    
+    print("INFO :", info)
+    print("ERROR :", error)
+    print("WARNING :", warning)
+
+11) Find Duplicate Lines
+    seen = set()
+    duplicates = set()
+    with open("data.txt", "r") as file:
+        for line in file:
+            line = line.strip()
+            if line in seen:
+                duplicates.add(line)
+            else:
+                seen.add(line)
+    print(duplicates)
+
+12) Reverse File Content
+    with open("data.txt", "r") as file:
+        lines = file.readlines()
+    with open("reverse.txt", "w") as file:
+        for line in reversed(lines):
+            file.write(line)
+
+13) Compare Two Files
+    with open("file1.txt", "r") as f1:
+        data1 = f1.read()
+    
+    with open("file2.txt", "r") as f2:
+        data2 = f2.read()
+    
+    if data1 == data2:
+        print("Same File")
+    
+    else:
+        print("Different File")
+
+14) File Encryption (Simple Caesar Cipher)
+    shift = 3   
+    with open("message.txt", "r") as file:
+        text = file.read()
+    
+    encrypted = ""    
+    for ch in text:    
+        encrypted += chr(ord(ch) + shift)
+    
+    with open("encrypted.txt", "w") as file:
+        file.write(encrypted)
+-------------------------------------------------------------------------------------------------------
+
+Beginner → Intermediate
+👉 Count vowels and consonants in a file.
+👉 Count the number of digits, alphabets, and special characters.
+👉 Print only even-numbered lines from a file.
+👉 Print only odd-numbered lines from a file.
+👉 Find the longest word in a file.
+Intermediate
+👉 Remove duplicate lines while preserving order.
+👉 Sort all lines alphabetically and save them to a new file.
+👉 Find the top 10 most frequent words.
+👉 Merge two files alternately (line by line).
+👉 Split a large file into smaller files (100 lines each).
+Advanced
+👉 Build a simple log analyzer that reports counts of INFO, WARNING, and ERROR and lists the line numbers of each error.
+👉 Compare two files and print the first line where they differ.
+👉 Implement a simple text-based backup system that creates timestamped copies of a file before modifying it.
+👉 Read a CSV file manually, calculate the average of a numeric column, and write a summary report to another file.
+👉 Search for a keyword in all .txt files inside a folder and print the filename, line number, and matching line.
 
