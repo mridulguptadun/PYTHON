@@ -1,0 +1,201 @@
+Contact Book ⭐⭐⭐
+  1. Add Contact
+  2. View Contact
+  3. Search Contact
+  4. Update Contact
+  5. Delete Contact
+  6. Exit
+
+----------
+contact.py
+----------
+
+import json
+def load_data():
+	with open("contact-book.json","r") as file:
+		return json.load(file)
+
+def save_data(data):
+	with open("contact-book.json", "w") as file:
+		json.dump(data, file, indent=4)
+
+def add_contact():
+	contacts = load_data()
+	cid = input("Enter Id : ").strip()
+	name = input("Enter Name : ").strip()
+	phone = input("Enter Phone No : ").strip()
+	email = input("Enter Email : ").strip().lower()
+
+	if name == "":
+		print("Name Can't be Empty")
+		return
+	if len(name) < 3:
+		print("Name Should Be at least 3 Characters")
+		return
+
+	if not phone.isdigit():
+		print("Phone No. Should Contain Digits Only.")
+		return
+
+	if len(phone) != 10:
+		print("Phone No Must be 10 Digits")
+		return
+
+	if "@" not in email or "." not in email:
+		print("Invalid Email")
+		return
+
+	if email.count("@") != 1:
+		print("Invalid Email")
+		return
+
+	for con in contacts:
+		if con["id"] == cid:
+			print("ID Already Exists")
+			return
+		if con["phone"] == phone:
+			print("Phone Number Already Exists")
+			return
+
+	contact = {
+		 "id" : cid,
+		 "name" : name,
+		 "phone" : phone,
+		 "email" : email
+	}
+	contacts.append(contact)
+	save_data(contacts)
+	print("Contact Added Successfully")
+
+def view_contacts():
+	contacts = load_data()
+	if len(contacts) == 0:
+		print("No Data Found")
+		return
+	for con in contacts:
+		print("_" * 30)
+		print("Name : ", con["name"])
+		print("Phone : ", con["phone"])
+		print("Email : ", con["email"])
+
+def search_contact():
+	contacts = load_data()
+	print("Search By : ")
+	print("1. Name")
+	print("2. Phone")
+
+	choice = input("Enter Your Choice : ")
+	if choice == "1":
+		name = input("Enter Name : ")
+		for con in contacts:
+			if con["name"].lower() == name.lower():
+				print(con)
+				return
+
+	elif choice == "2":
+		phone = input("Enter Phone No : ")
+		for con in contacts:
+			if con["phone"] == phone:
+				print(con)
+				return
+	print("Contact Not Found")
+
+def update_contact():
+	contacts = load_data()
+	cid = input("Enter Id : ").strip()
+
+	for con in contacts:
+		if con["id"] == cid:
+			name = input("Enter New Name : ").strip()
+			phone = input("Enter New Phone No :").strip()
+			email = input("Enter New Email :").strip().lower()
+			
+			# Validations
+			if name == "":
+				print("Name Can't be Empty")
+				return
+
+			if len(name) < 3:
+				print("Name Should Be at least 3 Characters")
+				return
+
+			if not phone.isdigit():
+				print("Phone No. Should Contain Digits Only.")
+				return
+
+			if len(phone) != 10:
+				print("Phone No Must be 10 Digits")
+				return
+
+			if "@" not in email or "." not in email:
+				print("Invalid Email")
+				return
+
+			if email.count("@") != 1:
+				print("Invalid Email")
+				return
+
+			for cont in contacts:
+				if cont["phone"] == phone and cont["id"] != cid:
+					print("Phone No Already Exists")
+					return
+
+			con["name"] = name
+			con["phone"] = phone
+			con["email"] = email
+
+			save_data(contacts)
+			print("Data Updated Successfully")
+			return
+	print("Data Not Found")
+
+def delete_contact():
+	contacts = load_data()
+	cid = input("Enter Id : ")
+	for con in contacts:
+		if con["id"] == cid:
+			contacts.remove(con)
+			save_data(contacts)
+			print("Deleted Successfully")
+			return
+	print("Contact Not Found")
+
+
+-------
+main.py
+-------
+import contact_book
+
+while True:
+
+    print("\n===== Contact Book =====")
+    print("1. Add Contact")
+    print("2. View Contact")
+    print("3. Search Contact")
+    print("4. Update Contact")
+    print("5. Delete Contact")
+    print("6. Exit")
+
+    choice = input("Enter Choice : ")
+
+    if choice == "1":
+        contact_book.add_contact()
+
+    elif choice == "2":
+        contact_book.view_contacts()
+
+    elif choice == "3":
+        contact_book.search_contact()
+
+    elif choice == "4":
+        contact_book.update_contact()
+
+    elif choice == "5":
+        contact_book.delete_contact()
+
+    elif choice == "6":
+        print("Thank You")
+        break
+
+    else:
+        print("Invalid Choice")
