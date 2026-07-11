@@ -1,7 +1,7 @@
 =========================
 | What is an Exception? |
 =========================
-An Exception is an event that occurs during the execution of a program and interrupts the normal flow of the program.
+👉 An Exception is an event that occurs during the execution of a program and interrupts the normal flow of the program.
 
 a = 10
 b = 0
@@ -12,7 +12,7 @@ o/p : ZeroDivisionError: division by zero
 ===============================
 | What is Exception Handling? |
 ===============================
-Exception Handling is the process of detecting, catching, and handling runtime errors so that the program can continue executing normally.
+👉 Exception Handling is the process of detecting, catching, and handling runtime errors so that the program can continue executing normally.
 
 ------------------------------
 | Without Exception Handling |
@@ -61,12 +61,12 @@ ________________________________________________
 ==============
 | try Block? |
 ==============
-The try block contains the code that may raise an exception.
+👉 The try block contains the code that may raise an exception.
 
 =================
 | except Block? |
 =================
-The except block catches and handles the exception raised in the try block.
+👉 The except block catches and handles the exception raised in the try block.
 
 try:
     print(10 / 0)
@@ -138,7 +138,7 @@ o/p: division by zero
 ===============
 | else Block? |
 ===============
-The else block executes only if no exception occurs in the try block.
+👉 The else block executes only if no exception occurs in the try block.
 
 try:
     risky code
@@ -160,7 +160,7 @@ i/p : num = abc o/p Invalid Input
 ==================
 | finally Block? |
 ==================
-The finally block always executes whether an exception occurs or not.
+👉 The finally block always executes whether an exception occurs or not.
 
 try:
     print(10 / 2)
@@ -201,7 +201,7 @@ finally:
 ====================
 | raise Statement? |
 ====================
-The raise statement is used to manually raise an exception.
+👉 The raise statement is used to manually raise an exception.
 
 age = 15
 if age < 18:
@@ -233,7 +233,7 @@ except Exception:
 O/P: Outer Try
      Inner Exception Handled
 
-===========================================================================================================================================
+=======================
 | Interview Questions |
 =======================
 1. What is an Exception?
