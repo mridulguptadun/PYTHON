@@ -1,10 +1,10 @@
-# Inventory Management System
-1. Add Product
-2. View Products
-3. Search Product
-4. Update Quantity
-5. Delete Product
-6. Exit
+Inventory Management System ⭐⭐⭐
+	1. Add Product
+	2. View Products
+	3. Search Product
+	4. Update Quantity
+	5. Delete Product
+	6. Exit
 
 ----------
 product.py
