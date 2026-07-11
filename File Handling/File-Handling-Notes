@@ -1,11 +1,11 @@
 ========================
 | Python File Handling |
 ========================
--> File Handling is the process of creating, opening, reading, writing, appending, updating, and deleting files using Python.
--> File Handling allows a Python program to store data permanently inside files instead of keeping it only in memory.
+👉 File Handling is the process of creating, opening, reading, writing, appending, updating, and deleting files using Python.
+👉 File Handling allows a Python program to store data permanently inside files instead of keeping it only in memory.
 
 ===================
-| What is a File? | -> A file is a collection of data stored permanently on a storage device.
+| What is a File? | 👉 A file is a collection of data stored permanently on a storage device.
 ===================
 photo.jpg
 video.mp4
@@ -29,7 +29,7 @@ Delete
 Rename
 
 ==========
-| open() | -> The open() function is used to open a file and returns a file object.
+| open() | 👉 The open() function is used to open a file and returns a file object.
 ==========
 file = open(filename, mode)
 file = open("data.txt", "r")  # Mode r => Read
@@ -46,7 +46,7 @@ b => Binary Mode -> image, video, audio
 + => Plus Mode -> Red + Write (r+, w+, a+)
 
 ==========
-| read() |  -> Reads the contents of a file.
+| read() |  👉 Reads the contents of a file.
 ==========
 file = open("data.txt", "r")
 print(file.read())
@@ -58,14 +58,14 @@ file = open("data.txt","r")
 print(file.read(3))
 
 ==============
-| readline() | -> Reads one line at a time.
+| readline() | 👉 Reads one line at a time.
 ==============
 file = open("fruit.txt","r")
 print(file.readline())
 print(file.readline())
 
 ===============
-| readlines() | -> Reads all lines and returns them as a list.
+| readlines() | 👉 Reads all lines and returns them as a list.
 ===============
 file = open("fruit.txt","r")
 print(file.readlines())
@@ -73,13 +73,13 @@ print(file.readlines())
 O/P : ['Apple\n', 'Banana\n', 'Orange']  # Return a List
 
 ===========
-| write() | -> Writes data into a file.
+| write() | 👉 Writes data into a file.
 ===========
 file = open("student.txt","w")
 file.write("Hello")
 
 ================
-| writelines() | -> Writes multiple strings from a list to a file.
+| writelines() | 👉 Writes multiple strings from a list to a file.
 ================
 file = open("student.txt","w")
 data = [
@@ -90,14 +90,14 @@ data = [
 file.writelines(data)
 
 ===========
-| close() | -> Closes the file and releases the system resources.
+| close() | 👉 Closes the file and releases the system resources.
 ===========
 file = open("student.txt", "r")
 print(file.read())
 file.close()
 
 ================================
-| with Statement (Recommended) | -> The with statement automatically closes the file after the block of code finishes, even if an error occurs.
+| with Statement (Recommended) | 👉 The with statement automatically closes the file after the block of code finishes, even if an error occurs.
 ================================
 with open("student.txt", "r") as file:
     print(file.read())
