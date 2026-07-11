@@ -1,8 +1,8 @@
 ========
 | JSON |
 ========
--> JSON (JavaScript Object Notation) is a lightweight data-interchange format used to store and exchange data between applications. 
-It is human-readable, language-independent, and supported by almost every programming language.
+👉 JSON (JavaScript Object Notation) is a lightweight data-interchange format used to store and exchange data between applications. 
+    It is human-readable, language-independent, and supported by almost every programming language.
 
 {
     "name": "Mridul",
@@ -10,11 +10,11 @@ It is human-readable, language-independent, and supported by almost every progra
     "city": "Delhi"
 }
 
-1. Store Data
-2. Sending data on internet
-3. Fetching data from API's
-4. For creating Configuration files
-5. Creating database backup
+👉 Store Data
+👉 Sending data on internet
+👉 Fetching data from API's
+👉 For creating Configuration files
+👉 Creating database backup
 
 Python
    ↓
@@ -25,11 +25,11 @@ data.json
 ------------------------
 | Why JSON is Popular? |
 ------------------------
-1) Human Readable
-2) Lightweight
-3) Fast
-4) Easy to Understand
-5) Language Independent
+👉 Human Readable
+👉 Lightweight
+👉 Fast
+👉 Easy to Understand
+👉 Language Independent
 
 ======================
 | Python JSON Module |
@@ -53,7 +53,8 @@ _______________________
 =================================
 | Main Functions of JSON Module |
 =================================
-1. json.dumps() -> json.dumps() converts a Python object into a JSON formatted string.
+(1) json.dumps() 👉 json.dumps() converts a Python object into a JSON formatted string.
+
     import json
     student = {
         "name": "Mridul",
@@ -66,7 +67,8 @@ _______________________
 O/P : {"name": "Mridul", "age": 20}
       <class 'str'>
 
-2. json.loads() -> json.loads() converts a JSON formatted string into a Python object.
+(2) json.loads() 👉 json.loads() converts a JSON formatted string into a Python object.
+
     import json
     data = '{"name":"Mridul","age":20}'   
     student = json.loads(data) 
@@ -76,7 +78,8 @@ O/P : {"name": "Mridul", "age": 20}
 O/P : {'name': 'Mridul', 'age': 20}
       <class 'dict'>
 
-3. json.dump() -> json.dump() writes a Python object directly into a JSON file.
+(3) json.dump() 👉 json.dump() writes a Python object directly into a JSON file.
+
     import json
     student = {
         "name": "Mridul",
@@ -87,7 +90,8 @@ O/P : {'name': 'Mridul', 'age': 20}
 
 O/P : {"name": "Mridul", "age": 20}
 
-4. json.load() -> json.load() reads JSON data from a file and converts it into a Python object.
+(4) json.load() 👉 json.load() reads JSON data from a file and converts it into a Python object.
+
     import json
     with open("student.json", "r") as file:
         data = json.load(file)
