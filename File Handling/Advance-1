@@ -1,8 +1,8 @@
 =======================
 | Topic: File Pointer |
 =======================
--> A file pointer is a cursor that keeps track of the current position inside a file. Every read or write operation starts from the current position of the file pointer.
--> A file pointer indicates where the next read or write operation will occur in a file.
+👉 A file pointer is a cursor that keeps track of the current position inside a file. Every read or write operation starts from the current position of the file pointer.
+👉 A file pointer indicates where the next read or write operation will occur in a file.
 Read
 ↓
 Pointer Move
@@ -59,8 +59,8 @@ ______________________________________________________________________
 ==========
 | tell() |
 ==========
--> method returns the current position of the file pointer in bytes.
--> tell() tells the current location of the file pointer.
+👉 method returns the current position of the file pointer in bytes.
+👉 tell() tells the current location of the file pointer.
 
 student.txt
 --------------
@@ -103,8 +103,8 @@ __________________________________
 ==========
 | seek() |
 ==========
--> The seek() method changes the current position of the file pointer to a specified location.
--> seek() moves the file pointer to any position inside the file.
+👉 The seek() method changes the current position of the file pointer to a specified location.
+👉 seek() moves the file pointer to any position inside the file.
 
 file = open("student.txt", "r")
 file.seek(7)
