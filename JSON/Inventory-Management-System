@@ -1,0 +1,252 @@
+# Inventory Management System
+1. Add Product
+2. View Products
+3. Search Product
+4. Update Quantity
+5. Delete Product
+6. Exit
+
+----------
+product.py
+----------
+
+import json
+def load_product():
+	try:
+		with open("im.json","r") as file:
+			return json.load(file)
+	except FileNotFoundError:
+		return []
+
+def save_product(data):
+	with open("im.json", "w") as file:
+		json.dump(data, file, indent=4)
+
+def add_product():
+	products = load_product()
+	pid = input("Enter Product ID : ").strip()
+	name = input("Enter Product Name : ").title()
+	email = input("Enter Email : ").strip().lower()
+	phone = input("Enter Phone No : ").strip()
+	price = input("Enter Product price : ").strip()
+	quantity = input("Enter Product Quantity : ").strip()
+
+	if name == "":
+		print("Product Name can't be Empty ")
+		return
+
+	if len(name) < 3:
+		print("Name must have 3 characters !")
+		return
+
+	if "@" not in email or "." not in email:
+		print("Invalid Email")
+		return
+
+	if email.count("@") != 1:
+		print("Invalid Email")
+		return
+
+	if not phone.isdigit():
+		print("Phone No. Should Contain Digits Only.")
+		return
+
+	if len(phone) != 10:
+		print("Phone No. Must Contain 10 digits")
+		return
+
+	if quantity == "":
+		print("Quantity can't be Empty")
+		return
+
+	try:
+		if "." in quantity:
+			quantity = float(quantity)
+		else:
+			quantity = int(quantity)
+	except ValueError:
+		print("Quantity should be a valid number")
+		return
+
+	try:
+		if "." in price:
+			price = float(price)
+		else:
+			price = int(price)
+	except ValueError:
+		print("Price should be a valid number")
+		return
+
+	for pro in products:
+		if pro["id"] == pid:
+			print("ID Already Exist")
+			return
+
+		if pro["phone"] == phone:
+			print("Phone No. Already Exist")
+			return
+
+		if pro["email"] == email:
+			print("Email Already Exist")
+			return
+
+	product = {
+			"id" : pid,
+			"name" : name,
+			"email" : email,
+			"phone" : phone,
+			"price" : price,
+			"quantity" : quantity
+	}
+	products.append(product)
+	save_product(products)
+	print("Product Created Successfully !")
+
+def display_products():
+	products = load_product()
+	if len(products) == 0:
+		print("No Products Found")
+		return
+	for pro in products:
+		print("_" * 20)
+		print("ID : ", pro["id"])
+		print("Product Name : ", pro["name"])
+		print("Email : ", pro["email"])
+		print("Phone No. : ", pro["phone"])
+		print("Product Price : ", pro["price"])
+		print("Quantity : ", pro["quantity"])
+
+def search_product():
+	products = load_product()
+	pid = input("Enter ID : ").strip()
+	for pro in products:
+		if pro["id"] == pid:
+			#print(pro)
+			print(json.dumps(pro, indent=4))
+			return
+	print("No Product Found")
+
+def update_product():
+	products = load_product()
+	pid = input("Enter ID : ").strip()
+	for pro in products:
+		if pro["id"] == pid:
+			name = input("Enter Product Name : ").title()
+			email = input("Enter Email : ").strip().lower()
+			phone = input("Enter Phone No : ").strip()
+			price = input("Enter Product price : ").strip()
+			quantity = input("Enter Product Quantity : ").strip()
+
+			# Validations
+			if name == "":
+				print("Product Name can't be Empty ")
+				return
+
+			if len(name) < 3:
+				print("Name must have 3 characters !")
+				return
+
+			if "@" not in email or "." not in email:
+				print("Invalid Email")
+				return
+
+			if email.count("@") != 1:
+				print("Invalid Email")
+				return
+
+			if not phone.isdigit():
+				print("Phone No. Should Contain Digits Only.")
+				return
+
+			if len(phone) != 10:
+				print("Phone No. Must Contain 10 digits")
+				return
+
+			if quantity == "":
+				print("Quantity can't be Empty")
+				return
+
+			try:
+				if "." in quantity:
+					quantity = float(quantity)
+				else:
+					quantity = int(quantity)
+			except ValueError:
+				print("Quantity should be a valid number")
+				return
+
+			try:
+				if "." in price:
+					price = float(price)
+				else:
+					price = int(price)
+			except ValueError:
+				print("Price should be a valid number")
+				return
+
+			for pro in products:
+				if pro["phone"] == phone and pro["id"] != pid:
+					print("Phone No Already Exists")
+					return
+
+			pro["name"] = name
+			pro["email"] = email
+			pro["phone"] = phone
+			pro["price"] = price
+			pro["quantity"] = quantity
+
+			save_product(products)
+			print("Data Updated Successfully !")
+			return
+	print("Data Not Found")
+
+
+
+def delete_product():
+	products = load_product()
+	pid = input("Enter ID : ").strip()
+	for pro in products:
+		if pro["id"] == pid:
+			products.remove(pro)
+			save_product(products)
+			print("Product Deleted Successfully")
+			return
+	print("No ID Found")
+
+--------
+main.py
+--------
+
+import inventory_management
+while True:
+	print("\n===== Inventory Management System =====")
+	print("1. Add Product")
+	print("2. View Products")
+	print("3. Search Product")
+	print("4. Update Quantity")
+	print("5. Delete Product")
+	print("6. Exit")
+
+	choice = input("Enter Your Choice : ")
+
+	if choice == "1":
+		inventory_management.add_product()
+
+	elif choice == "2":
+		inventory_management.display_products()
+
+	elif choice == "3":
+		inventory_management.search_product()
+
+	elif choice == "4":
+		inventory_management.update_product()
+
+	elif choice == "5":
+		inventory_management.delete_product()
+
+	elif choice == "6":
+		print("Thank You")
+		break
+
+	else:
+		print("Invalid Choice")
