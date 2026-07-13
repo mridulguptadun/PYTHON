@@ -1,0 +1,249 @@
+# enumerate() -> adds an index (counter) to an iterable.
+fruits = ["Apple", "Mango", "Banana"]
+for index, fruit in enumerate(fruits):
+	print(index, fruit)
+
+# zip() -> multiple iterables pair
+names = ["mohit", "Deepak", "Ankit"]
+marks = [90,60,40]
+for name, mark in zip(names, marks):
+	print(name, mark)
+
+# reversed() -> Iterate in Reverse order
+nums = [1,2,3,4,5,6]
+for i in reversed(nums):
+	print(i)
+
+# sorted() -> sort a data
+nums2 = [4,8,2,9,4,5]
+print(sorted(nums2))
+
+#Anonymous function lambda() -> A lambda function is a small anonymous function written in a single line.
+square = lambda x: x*x
+print(square(5))
+
+add = lambda a,b: a+b
+print(add(20,30))
+
+students = [("Ram", 80),("Amit", 60),("Kumar",90)]
+students.sort(key=lambda x: x[1])
+print(students)
+
+# comprehension -> creating collection in one line
+# List Comprehension
+# Dictionary Comprehension
+# Set Comprehension
+# Generator Expression
+
+square = [i * i for i in range(5)]
+print(square) # List
+
+sq = {i: i*i for i in range(5)}
+print(sq) # Dictionary
+
+squ = {i*i for i in range(5)}
+print(squ) # Set
+
+nums1 = (i*i for i in range(5))
+for i in nums1:
+	print(i)
+
+# Functional Programming
+# map() -> apply function on every item
+
+list1 = [1,2,3,4]
+result = list(map(lambda x:x*2, list1))
+print(result)
+
+# filter() return value on condtion true
+list2 = [1,2,3,4,5,6]
+result2 = list(filter(lambda x:x%2==0, list2))
+print(result2)
+
+# Mathematical Functions
+print(sum([10,20,30]))
+print(max([1,5,9]))
+print(min([1,5,9]))
+print(abs(-20))
+print(round(3.456,2))
+
+# Type Conversion Functions
+"""
+int()
+float()
+str()
+bool()
+list()
+tuple()
+set()
+dict()
+complex()
+bytes()
+bytearray()
+frozenset()
+"""
+
+# Iterable Functions
+"""
+len()
+range()
+any()
+all()
+iter()
+next()
+slice()
+"""
+
+# String Related Functions
+"""
+ord()
+chr()
+ascii()
+format()
+repr()
+"""
+
+# Object Related Functions
+"""
+type()
+isinstance()
+issubclass()
+id()
+hash()
+dir()
+vars()
+help()
+callable()
+"""
+
+# Input/Output Functions
+"""
+print()
+input()
+open()
+"""
+
+# Execution Functions
+"""
+eval()
+exec()
+compile()
+"""
+
+# Memory Functions
+"""
+globals()
+locals()
+delattr()
+getattr()
+setattr()
+hasattr()
+"""
+
+# Class Functions
+"""
+super()
+property()
+staticmethod()
+classmethod()
+object()
+"""
+
+# Numeric Functions
+"""
+bin()
+oct()
+hex()
+"""
+print(bin(10))
+print(oct(10))
+print(hex(10))
+
+# Boolean Functions
+"""
+all()
+any()
+bool()
+"""
+
+# Debugging Functions
+"""
+breakpoint()
+help()
+"""
+
+"""
+
+Python Built-in Functions (Common List)
+abs()
+aiter()
+all()
+anext()
+any()
+ascii()
+bin()
+bool()
+breakpoint()
+bytearray()
+bytes()
+callable()
+chr()
+classmethod()
+compile()
+complex()
+delattr()
+dict()
+dir()
+divmod()
+enumerate()
+eval()
+exec()
+filter()
+float()
+format()
+frozenset()
+getattr()
+globals()
+hasattr()
+hash()
+help()
+hex()
+id()
+input()
+int()
+isinstance()
+issubclass()
+iter()
+len()
+list()
+locals()
+map()
+max()
+memoryview()
+min()
+next()
+object()
+oct()
+open()
+ord()
+pow()
+print()
+property()
+range()
+repr()
+reversed()
+round()
+set()
+setattr()
+slice()
+sorted()
+staticmethod()
+str()
+sum()
+super()
+tuple()
+type()
+vars()
+zip()
+
+"""
