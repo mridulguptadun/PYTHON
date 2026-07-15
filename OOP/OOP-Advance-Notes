@@ -1,0 +1,115 @@
+==================================
+| Magic Methods (Dunder Methods) |
+==================================
+👉 Magic Methods (also called Dunder Methods) are special methods in Python that start and end with double underscores (__). 
+   They allow you to define how objects behave with built-in operations.
+👉 Python automatically call these methods
+👉 Dunder = Double UnderScore
+
+    __init__
+    __str__
+    __repr__
+    __len__
+    __add__
+    __eq__
+
+==============
+| __init__() |
+==============
+    class Student:
+        def __init__(self, name):    # Student.__init__(s, "Mridul")
+            self.name = name
+    s = Student("Mridul")    
+
+=============
+| __str__() |
+=============
+
+Without __str__()
+------------------
+    class Student:
+        def __init__(self, name):
+            self.name = name
+    s = Student("Mridul")
+    print(s)
+
+O/P : <__main__.Student object at 0x000001A...>   # memory address
+
+With __str__()
+---------------
+    class Student:
+        def __init__(self, name):
+            self.name = name
+        def __str__(self):
+            return self.name
+    s = Student("Mridul")
+    print(s)
+
+O/P : Mridul  # readable output
+-----------------------------------------------
+class Student:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+s = Student("Mridul", 21)
+print(s)  # print(s.__str__())  Python internally doing this
+
+O/P : Name: Mridul, Age: 21
+
+==============
+| __repr__() |
+==============
+it also representation string object
+
+class Student:
+    def __repr__(self):
+        return "Student Object"
+print(s)
+
+O/P :  Student Object
+
+__str__()  👉 User-friendly output.
+__repr__() 👉 Developer-friendly output.
+
+=============
+| __len__() |
+=============
+class Book:
+    def __len__(self):
+        return 250
+b = Book()
+print(len(b))
+
+O/P : 250
+
+========================
+| Common Magic Methods |
+========================
+_____________________________________________
+| Method        | Purpose                   |
+| ------------- | ------------------------- |
+| `__init__`    | Constructor               |
+| `__str__`     | User-friendly string      |
+| `__repr__`    | Developer-friendly string |
+| `__len__`     | `len(obj)`                |
+| `__add__`     | `+` operator              |
+| `__sub__`     | `-` operator              |
+| `__mul__`     | `*` operator              |
+| `__truediv__` | `/` operator              |
+| `__eq__`      | `==` operator             |
+| `__lt__`      | `<` operator              |
+| `__gt__`      | `>` operator              |
+_____________________________________________
+
+======================================================
+| Property Decorators (@property, @setter, @deleter) |
+======================================================
+👉 A property is a special Python feature that allows you to access methods like attributes while providing controlled access to data.
+
+
+
