@@ -1,0 +1,90 @@
+Python + SQL 
+
+Module 1: Introduction to Database
+👉 What is Data?
+👉 What is Database?
+👉 Types of Database
+👉 DBMS
+👉 RDBMS
+👉 Advantages of Database
+👉 SQL Introduction
+
+Module 2: MySQL Basics
+👉 Install MySQL
+👉 Install MySQL Workbench
+👉 Create Database
+👉 Show Databases
+👉 Use Database
+👉 Drop Database
+
+Module 3: Tables
+👉 Create Table
+👉 Data Types
+👉 Primary Key
+👉 NOT NULL
+👉 UNIQUE
+👉 DEFAULT
+👉 AUTO_INCREMENT
+👉 DESCRIBE Table
+
+Module 4: SQL Commands
+👉 DDL (Data Definition Language)
+👉 CREATE
+👉 ALTER
+👉 DROP
+👉 TRUNCATE
+👉 RENAME
+👉 DML (Data Manipulation Language)
+👉 INSERT
+👉 UPDATE
+👉 DELETE
+👉 DQL (Data Query Language)
+👉 SELECT
+👉 DCL
+👉 GRANT
+👉 REVOKE
+👉 TCL
+👉 COMMIT
+👉 ROLLBACK
+👉 SAVEPOINT
+
+Module 5: SQL Operators
+👉 Arithmetic
+👉 Comparison
+👉 Logical
+👉 BETWEEN
+👉 IN
+👉 LIKE
+👉 IS NULL
+👉 ORDER BY
+👉 LIMIT
+👉 DISTINCT
+
+Module 6: Aggregate Functions
+👉 COUNT()
+👉 SUM()
+👉 AVG()
+👉 MAX()
+👉 MIN()
+
+Module 7: GROUP BY & HAVING
+
+Module 8: Python MySQL Connector
+👉 Install mysql-connector-python
+👉 Connect Python with MySQL
+👉 Create Cursor
+👉 Execute Query
+👉 Commit
+👉 Close Connection
+
+Module 9: CRUD using Python
+👉 Create Record
+👉 Read Record
+👉 Update Record
+👉 Delete Record
+
+Module 10: Mini Projects
+👉 Student Management System
+👉 Library Management System
+👉 Employee Management System
+👉 Banking System
