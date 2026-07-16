@@ -333,9 +333,9 @@ O/P : ABC College
 👉 Modifying Class Variable
    BankAccount.bank_name = "Punjab National Bank"   # all ovariables will update
 
-===========================================================
+-----------------------------------------------------------
 | Difference Between Instance Variable and Class Variable |
-===========================================================
+-----------------------------------------------------------
 ____________________________________________________________________________________
 | Instance Variable              | Class Variable                                  |
 | ------------------------------ | ----------------------------------------------- |
@@ -356,9 +356,9 @@ ________________________________________________________________________________
             def show(self):
                 print("Hello")
 
-====================
+--------------------
 | Types of Methods |
-====================
+--------------------
 👉 Instance Method
     An instance method works with instance variables and is called using an object. It always takes self as the first parameter.
 
@@ -402,9 +402,9 @@ print(Calculator.add(5, 3))
 
 O/P : 8
 
-=================
+-----------------
 | Summary Table |
-=================
+-----------------
 ____________________________________________________________________________________
 | Feature         | Instance Method    | Class Method        | Static Method       |
 | --------------- | ------------------ | ------------------- | ------------------- |
@@ -414,9 +414,9 @@ ________________________________________________________________________________
 | Called Using    | Object             | Class (recommended) | Class (recommended) |
 ------------------------------------------------------------------------------------
 
-======================
+----------------------
 | Complete Breakdown |
-======================
+----------------------
 ______________________________________________________________________
 | Code                                 | Type                        |
 | ------------------------------------ | --------------------------- |
@@ -483,9 +483,9 @@ O/P : AttributeError
     
 self.__salary -> _Student__salary
 
-=================
+-----------------
 | Getter Method |
-=================
+-----------------
 👉 This method use for read a private data
 
 class Student:
@@ -500,9 +500,9 @@ print(s1.get_salary())
 
 O/P : 50000
 
-=================
+-----------------
 | Setter Method |
-=================
+-----------------
 👉 This method use for updating private data
 
 class Student:
@@ -519,9 +519,9 @@ print(s1.get_salary())
 
 O/P : 70000
 
-===========
+-----------
 | Summary |
-===========
+-----------
 _______________________________________________________________________
 | Type      | Syntax        | Accessible Outside?                      |
 | --------- | ------------- | -----------------------------------------|
@@ -529,6 +529,339 @@ _______________________________________________________________________
 | Protected | `self._name`  | ✅ Yes (Convention: avoid direct access) |
 | Private   | `self.__name` | ❌ Not directly                          |
 ------------------------------------------------------------------------
+
+===============
+| Inheritance |
+===============
+👉 Inheritance is the process by which one class acquires the properties (attributes) and behaviors (methods) of another class.
+
+class Animal:                             # Parent Class (Base Class)
+
+    def eat(self):
+        print("Eating")
+
+    def sleep(self):
+        print("Sleeping"))
+
+class Dog(Animal):                        # Child Class (Derived Class)
+    pass
+
+d1 = Dog()
+d1.eat()
+
+O/P : Animal is Eating
+-------------------------------------
+class Animal:
+
+    def __init__(self):
+        print("Animal Constructor")
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+
+O/P : Animal Constructor
+-------------------------------------
+class Animal:
+
+    def __init__(self):
+        print("Animal Constructor")
+
+class Dog(Animal):
+
+    def __init__(self):
+        print("Dog Constructor")
+
+d = Dog()
+
+O/P : Dog Constructor
+
+--------------------
+| super() Function |
+--------------------
+if want to run both constructor parent and child we use supper() function
+
+class Animal:
+
+    def __init__(self):
+        print("Animal Constructor")
+
+class Dog(Animal):
+
+    def __init__(self):
+        super().__init__()
+        print("Dog Constructor")
+
+d = Dog()
+
+O/P : Animal Constructor
+      Dog Constructor
+
+------------------------
+| Types of Inheritance |
+------------------------
+1. Single Inheritance
+2. Multilevel Inheritance
+3. Multiple Inheritance
+4. Hierarchical Inheritance
+5. Hybrid Inheritance
+
+-----------
+| Summary |
+-----------
+___________________________________________________
+| Term         | Meaning                          |
+| ------------ | -------------------------------- |
+| Parent Class | Base class                       |
+| Child Class  | Derived class                    |
+| Inheritance  | Acquiring properties and methods |
+| `super()`    | Calls parent methods/constructor |
+| Main Benefit | Code Reusability                 |
+---------------------------------------------------
+
+=====================
+| Method Overriding |
+=====================
+👉 Method Overriding is the process where a child class provides its own implementation of a method that already 
+    exists in the parent class.
+✔️ Method name should be same
+✔️ Parent and child should have inheritance
+
+    class Animal:    
+        def sound(self):
+            print("Animal Sound")
+    
+    class Dog(Animal):    
+        def sound(self):
+            print("Dog Barks")
+    
+    d = Dog()
+    d.sound()    # now child replace parent method
+
+O/P : Dog Barks
+--------------------------------------------------
+    class Person:   
+        def intro(self):
+            print("I am a Person")
+    
+    class Student(Person):    
+        def intro(self):
+            print("I am a Student")
+    
+    s = Student()
+    s.intro()
+
+O/P : I am a Student
+------------------------------------------------------------
+calling both parent and child method using super() function
+
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+
+class Dog(Animal):
+    def sound(self):
+        super().sound()
+        print("Dog Barks")
+
+d = Dog()
+d.sound()
+
+O/P : Animal Sound
+      Dog Barks
+
+---------------
+| Overloading |  
+---------------
+❌  Python does not support overloading like java/c++
+✅  Python use optional parameters (*args, default arguments)
+
+-----------
+| Summary |
+-----------
+_________________________________________________
+| Feature              | Method Overriding      |
+| -------------------- | ---------------------- |
+| Parent Class         | Required               |
+| Child Class          | Required               |
+| Method Name          | Same                   |
+| Purpose              | Change Parent Behavior |
+| Parent Method Access | `super()`              |
+-------------------------------------------------
+
+
+================
+| Polymorphism |
+================
+👉 Polymorphism means "many forms". It allows the same method or interface to behave differently for different objects.
+
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
+
+O/P : Bark
+      Meow
+----------------------------
+class Bird:
+    def fly(self):
+        print("Bird is Flying")
+
+class Aeroplane:
+    def fly(self):
+        print("Aeroplane is Flying")
+
+b = Bird()
+a = Aeroplane()
+
+b.fly()
+a.fly()
+
+O/P : Bird is Flying
+      Aeroplane is Flying
+
+Method same -> Behavior different
+-----------------------------------------
+Polymorphism + Inheritance
+
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog Bark")
+
+class Cat(Animal):
+    def sound(self):
+        print("Cat Meow")
+
+animals = [Dog(), Cat()]
+for animal in animals:
+    animal.sound()
+
+O/p : Dog Bark
+      Cat Meow
+
+Loop Same -> Method same -> Object change -> output change
+
+
+Built-in Polymorphism 
+----------------------
+👉 Pyhton have many built-in polymorphism functions
+    print(len("Hello"))
+    print(len([1,2,3,4]))
+    print(len((1,2)))
+    print(5 + 10)
+    print("Mridul " + "Gupta")
+
+Types of Polymorphism
+----------------------
+👉 Compile-Time Polymorphism
+    Java/C++ -> Method Overloading -> Python does't support
+
+👉 Run-Time Polymorphism
+   due to Method Overriding python support this
+
+-----------
+| Summary |
+-----------
+_____________________________________________________
+| Concept              | Meaning                    |
+| -------------------- | -------------------------- |
+| Poly                 | Many                       |
+| Morph                | Forms                      |
+| Same Method          | Different Behavior         |
+| Runtime Polymorphism | Method Overriding          |
+| Duck Typing          | Behavior matters, not type |
+-----------------------------------------------------
+
+--------------
+| Difference |
+--------------
+_______________________________________________________________________________________
+| Overriding                               | Polymorphism                             |
+| ---------------------------------------- | ---------------------------------------- |
+| Child parent ka method replace karta hai | Same interface, different behavior       |
+| Technique                                | Result                                   |
+| Inheritance required                     | Usually achieved using overriding in OOP |
+---------------------------------------------------------------------------------------
+
+===============
+| Abstraction |
+===============
+👉 Abstraction is the process of hiding implementation details and showing only the essential features to the user.
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):           # Abstract Class
+    @abstractmethod          # Abstract Method
+    def sound(self):
+        pass
+ 
+class Dog(Animal):           # Child Class
+    def sound(self):
+        print("Dog Barks")
+
+d = Dog()
+d.sound()
+
+O/P : Dog Barks
+----------------------------------------------------
+# Multiple Abstract Methods
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+class Rectangle(Shape):
+
+    def area(self):
+        print("Area")
+
+    def perimeter(self):
+        print("Perimeter"
+
+
+Encapsulation vs Abstraction
+__________________________________________________
+| Encapsulation          | Abstraction           |
+| ---------------------- | --------------------- |
+| Hides data             | Hides implementation  |
+| Uses private variables | Uses abstract classes |
+| Focus on security      | Focus on simplicity   |
+--------------------------------------------------
+
+-----------
+| Summary |
+-----------
+______________________________________________________________
+| Concept                  | Meaning                         |
+| ------------------------ | ------------------------------- |
+| ABC                      | Abstract Base Class             |
+| `@abstractmethod`        | Method without implementation   |
+| Child Class              | Must implement abstract methods |
+| Object of Abstract Class | Not Allowed                     |
+| Main Purpose             | Hide implementation details     |
+--------------------------------------------------------------
 
 
 
