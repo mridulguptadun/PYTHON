@@ -350,8 +350,185 @@ ________________________________________________________________________________
 ==================
 | Methods in OOP |
 ==================
+👉 A method is a function that is defined inside a class. It is used to perform operations on objects or classes.
+👉 Method = Function inside a Class
+        class Student:
+            def show(self):
+                print("Hello")
 
+====================
+| Types of Methods |
+====================
+👉 Instance Method
+    An instance method works with instance variables and is called using an object. It always takes self as the first parameter.
 
+class Bank:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+        print(self.balance)
+
+acc = Bank(1000)
+acc.deposit(500)
+
+O/P : 1500
+
+👉 Class Method
+    A class method works with class variables. It uses cls instead of self and is decorated with @classmethod.
+
+class Student:
+    college = "ABC College"
+
+    @classmethod
+    def show_college(cls):    cls = Current Class
+        print(cls.college)
+
+Student.show_college()
+
+O/P : ABC College
+
+👉 Static Method
+    A static method does not use instance variables or class variables. 
+    It is an independent utility method and is decorated with @staticmethod.
+
+    class Calculator:
+        @staticmethod
+        def add(a, b):
+            return a + b
+print(Calculator.add(5, 3))
+
+O/P : 8
+
+=================
+| Summary Table |
+=================
+____________________________________________________________________________________
+| Feature         | Instance Method    | Class Method        | Static Method       |
+| --------------- | ------------------ | ------------------- | ------------------- |
+| First Parameter | `self`             | `cls`               | None                |
+| Decorator       | None               | `@classmethod`      | `@staticmethod`     |
+| Works With      | Instance Variables | Class Variables     | Neither             |
+| Called Using    | Object             | Class (recommended) | Class (recommended) |
+------------------------------------------------------------------------------------
+
+======================
+| Complete Breakdown |
+======================
+______________________________________________________________________
+| Code                                 | Type                        |
+| ------------------------------------ | --------------------------- |
+| `college = "This Is Colz Name"`      | ✅ Class Variable          |
+| `self.name = name`                   | ✅ Instance Variable       |
+| `self.age = age`                     | ✅ Instance Variable       |
+| `def __init__(...)`                  | ✅ Constructor             |
+| `def show(self)`                     | ✅ Instance Method         |
+| `@classmethod def show_college(cls)` | ✅ Class Method            |
+| `s1 = Student(...)`                  | ✅ Object Creation         |
+| `s1.show()`                          | ✅ Calling Instance Method |
+| `Student.show_college()`             | ✅ Calling Class Method    |
+---------------------------------------------------------------------
+
+=================
+| Encapsulation |
+=================
+👉 Encapsulation is the process of binding data (variables) and methods (functions) into a single unit (class) 
+    and restricting direct access to the data.
+
+Encapsulation
+↓
+Enclose
+↓
+closed inside a box
+
+Python usese naming conventions and name mangling
+
+1️⃣ Public Members (Default access.) access every where
+
+    class Student:
+        def __init__(self):
+            self.name = "Mridul"
+    s1 = Student()
+    print(s1.name)
+
+O/P : Mridul
+
+2️⃣ Protected Members (strart using single underscore _ )
+
+    class Student:
+        def __init__(self):
+            self._age = 21
+    s1 = Student()
+    print(s1._age)
+
+O/P : 21
+
+👉 Python does not strictly enforce encapsulation or access control like languages such as Java or C++ do. Instead, 
+    Python relies entirely on naming conventions and developer discipline. 
+
+3️⃣ Private Members  (Double underscore (__) )
+
+    class Student:
+        def __init__(self):
+            self.__salary = 50000
+    s1 = Student()
+    print(s1.__salary)
+
+O/P : AttributeError
+
+👉 Name Mangling 
+    Actually Python changed variable name
+    
+self.__salary -> _Student__salary
+
+=================
+| Getter Method |
+=================
+👉 This method use for read a private data
+
+class Student:
+    def __init__(self):
+        self.__salary = 50000
+
+    def get_salary(self):
+        return self.__salary
+
+s1 = Student()
+print(s1.get_salary())
+
+O/P : 50000
+
+=================
+| Setter Method |
+=================
+👉 This method use for updating private data
+
+class Student:
+    def __init__(self):
+        self.__salary = 50000
+
+    def set_salary(self, salary):
+        if salary > 0:
+            self.__salary = salary
+
+s1 = Student()
+s1.set_salary(70000)
+print(s1.get_salary())
+
+O/P : 70000
+
+===========
+| Summary |
+===========
+_______________________________________________________________________
+| Type      | Syntax        | Accessible Outside?                      |
+| --------- | ------------- | -----------------------------------------|
+| Public    | `self.name`   | ✅ Yes                                   |
+| Protected | `self._name`  | ✅ Yes (Convention: avoid direct access) |
+| Private   | `self.__name` | ❌ Not directly                          |
+------------------------------------------------------------------------
 
 
 
