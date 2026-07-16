@@ -1,0 +1,78 @@
+==============================
+| Composition vs Aggregation |
+==============================
+👉 Composition is a relationship where one class contains another class, and the contained object cannot exist independently of the parent object.
+1) Has-A Relationship
+2) Strong Relationship
+3) Dependent Objects
+4) Ownership
+
+Car
+ │
+ ├── Engine
+
+Car has an Engine. 
+This is Has-A Relationship
+
+class Engine:
+    def start(self):
+        print("Engine Started")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()   # This is called composition  object of engine class
+
+    def drive(self):
+        self.engine.start()
+        print("Car is Moving")
+
+car = Car()
+car.drive()
+
+O/P : Engine Started
+      Car is Moving
+
+Composition Features
+------------------------
+
+✅ Has-A Relationship
+✅ Strong Ownership
+✅ Code Reusability
+✅ Better Design
+
+👉 Aggregation is a relationship where one class uses another class, but both objects can exist independently.
+1) Has-A Relationship
+2) Weak Relationship
+3) Independent Objects
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+class Teacher:
+    def __init__(self, student):
+        self.student = student
+
+    def show(self):
+        print(self.student.name)
+
+s = Student("Mridul")
+t = Teacher(s)
+t.show()
+
+O/P : Mridul
+
+--------------------
+| Difference Table |
+--------------------
+__________________________________________________
+| Feature         | Composition  | Aggregation   |
+| --------------- | ------------ | ------------- |
+| Relationship    | Has-A        | Has-A         |
+| Strength        | Strong       | Weak          |
+| Dependency      | Dependent    | Independent   |
+| Object Creation | Inside class | Outside class |
+| Lifetime        | Same         | Different     |
+--------------------------------------------------
+
+
