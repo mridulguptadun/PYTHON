@@ -1,0 +1,211 @@
+👉 Sum of Digits of a number
+
+    num = int(input("Enter a number: "))
+    sum = 0
+    while num > 0:
+        digit = num % 10
+        sum = sum + digit
+        num = num // 10
+    
+    print("Sum of digits =", sum)
+
+👉 Sum of Even Digits of a number
+
+    n = int(input("Enter Any No : "))
+    sum = 0
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 0:
+    		sum = sum + d
+    	n //= 10
+    print(sum)
+
+👉 Sum of Odd Digits of a number
+
+    n = int(input("Enter Any No : "))
+    sum = 0
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 1:
+    		sum = sum +d
+    	n //= 10
+    print(sum)
+
+👉 Smallest Digits of a number
+
+    n = int(input("Enter Any No : "))
+    smallest = n % 10
+    while n > 0:
+    	d = n % 10
+    	if d < smallest:
+    		smallest = d
+    	n //= 10
+    print(smallest)
+
+👉 Smallest Even Digits of a number
+
+    n = int(input("Enter Any No : "))
+    smallest = n % 10
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 0 and d < smallest:
+    		smallest = d
+    	n //= 10
+    print("Smallest Even Digit",smallest)
+
+👉 Smallest Odd Digits of a number
+
+    n = int(input("Enter Any No : "))
+    smallest = n % 10
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 1 and d < smallest:
+    		smallest = d
+    	n //= 10
+    print("Smallest Odd Digit",smallest)
+
+👉 Second Largest Digits of a number
+
+    n = int(input("Enter Any No : "))
+    largest = 0
+    second = 0
+    while n > 0:
+    	d = n % 10
+    	if d > largest:
+    		second = largest
+    		largest = d
+    	elif d > second and d != largest:
+    		second = d
+    	n //= 10
+    print("Second Largest Digit : ", second)
+
+👉 Count of  Digits of a number
+
+    n = int(input("Enter A No :"))
+    count = 0
+    while n > 0:
+    	d = n % 10
+    	count += 1
+    	n //= 10
+    print(count)
+	
+👉 Count of  Even Digits of a number
+
+    n = int(input("Enter Any Digit :"))
+    count = 0
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 0:
+    		count = count + d
+    	n //= 10
+    print(count)
+
+👉 Count of Prime Digits of a number
+
+    #count prime digit 123456789
+    n = int(input("Enter Any No : "))
+    count = 0
+    while n > 0:
+    	d = n % 10
+    	if d in (2,3,5,7):
+    		count += 1
+    	n //= 10
+    print(count)
+
+👉 Largest Even Digits of a number
+
+    n = int(input("Enter Any No : "))
+    even = 0
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 0 and d > even:
+    		even = d
+    	n //= 10
+    print("Largest Even Digit",even)
+
+👉 Largest  Digit of a number
+
+    n = int(input("Enter Any no :"))
+    largest = 0
+    while n > 0:
+    	d = n % 10
+    	if d > largest:
+    		largest = d
+    	n //= 10
+    print(largest)
+
+👉 Largest Even Digit of a number
+
+    n = int(input("Enter Any No : "))
+    even = 0
+    while n > 0:
+    	d = n % 10
+    	if d % 2 == 0 and d > even:
+    		even = d
+    	n //= 10
+    print("Largest Even Digit",even)
+
+👉 Prime number
+
+    n = int(input("Enter Any No : "))
+    if n <= 1:
+    	print("Not Prime")
+    else:
+    	for i in range (2, n):
+    		if n % i == 0:
+    			print("Not a Prime No")
+    			break
+    	else:
+    		print("Prime No")
+
+👉 Palindrome number
+
+    n = int(input("Enter Any No : "))
+    t = n
+    rev = 0
+    while t > 0:
+    	r = t % 10                               
+    	rev = (rev * 10) + r
+    	t = t//10
+    if (n == rev):
+    	print("Palindrome")
+    else:
+    	print("Not A Palindrome")
+    
+    """
+    t=121, r = 12
+    """
+
+👉 Product of Digit
+
+    n = int(input("Enter Any No :"))
+    prod = 1
+    while n > 0:
+    	d = n % 10
+    	prod = prod * d
+    	n //= 10
+    print(prod)
+
+👉 Reverse of a Number
+
+    n = int(input("Enter Any No :"))
+    rev = 0
+    while n > 0:
+    	d = n % 10
+    	rev = (rev * 10) + d
+    	n //= 10
+    print(rev)
+
+👉 Armstrong Number
+
+    n = int(input("Enter any no :"))
+    t = n
+    m = 0
+    while t > 0:
+    	d = t % 10
+    	m += d**3
+    	t //= 10	
+    if n == m:
+    	print("armstrong")
+    else:
+    	print("not")
