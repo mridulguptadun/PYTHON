@@ -165,10 +165,10 @@
 👉 Create a Movie class (name, director, rating).
 👉 Create a Teacher class (name, subject, salary).
 👉 Create a Hospital class (patient_name, disease, room_no).
-👉 Create a CricketPlayer class (name, runs, matches) aur average() method banao.
-👉 Create a Bike class (brand, model, price) aur show_details() method banao.
-👉 Create a Product class (name, price, quantity) aur total_cost() method banao.
-👉 Create a MovieTicket class (movie_name, ticket_price, tickets) aur bill() method banao.
-👉 Create a Rectangle class jisme area() aur perimeter() dono methods ho.
-👉 Create a Student class jisme total() aur percentage() methods ho.
+👉 Create a CricketPlayer class (name, runs, matches) and average() method.
+👉 Create a Bike class (brand, model, price) and show_details() method.
+👉 Create a Product class (name, price, quantity) and total_cost() method.
+👉 Create a MovieTicket class (movie_name, ticket_price, tickets) and bill() method.
+👉 Create a Rectangle class jisme area() aand perimeter() both methods.
+👉 Create a Student class jisme total() and percentage() methods.
 
