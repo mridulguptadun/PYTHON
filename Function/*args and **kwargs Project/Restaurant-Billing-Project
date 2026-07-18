@@ -1,0 +1,24 @@
+def bill(customer, *foods, **details):
+	print("=" * 20)
+	print("Resturant Bill")
+	print("=" * 20)
+
+	print("Customer : ", customer)
+	print("\nOrdered Items : ")
+	for food in foods:
+		print("-", food)
+
+	print("\nBill Informtion : ")
+	for k, v in details.items():
+		print(f"{k} : {v}")
+
+bill(
+	"Sophia",
+	"Pizza",
+	"Pasata",
+	"Burger",
+	"Juice",
+	table=12,
+	payment="Cash",
+	waiter="Alex"
+)
