@@ -1,0 +1,87 @@
+======================
+| Python Collections |
+======================
+👉 Python Collections are built-in data structures that are used to store, organize, and manage multiple values in a single variable. 
+   They make it easy to perform operations like searching, inserting, updating, deleting, and iterating over data.
+
+👉 Stores multiple values in one variable.
+👉 Helps organize data efficiently.
+👉 Supports different data types.
+👉 Some collections are mutable, while others are immutable.
+👉 Some collections allow duplicate values, while others do not.
+👉 Each collection has its own features and use cases.
+
+===============================
+| Types of Python Collections |
+===============================
+_______________________________________________________________________________
+| Collection | Ordered           | Mutable | Duplicates            | Indexing |
+| ---------- | ----------------- | ------- | --------------------- | -------- |
+| List       | Yes               | Yes     | Yes                   | Yes      |
+| Tuple      | Yes               | No      | Yes                   | Yes      |
+| Set        | No                | Yes     | No                    | No       |
+| Dictionary | Yes (Python 3.7+) | Yes     | Keys: No, Values: Yes | By Key   |
+-------------------------------------------------------------------------------
+
+========
+| List |
+========
+👉 A List is an ordered, mutable collection that allows duplicate elements.
+
+    fruits = ["Apple", "Banana", "Mango", "Banana"]
+    print(fruits)
+
+O/P : ['Apple', 'Banana', 'Mango', 'Banana']
+
+=========
+| Tuple |
+=========
+👉 A Tuple is an ordered, immutable collection that allows duplicate elements.
+
+    numbers = (10, 20, 30, 20)
+    print(numbers)
+
+O/P : (10, 20, 30, 20)
+
+=======
+| Set |
+=======
+👉 A Set is an unordered, mutable collection that stores only unique elements.
+
+    colors = {"Red", "Blue", "Green", "Red"}
+    print(colors)
+
+O/P : {'Green', 'Blue', 'Red'}
+
+==============
+| Dictionary |
+==============
+👉 A Dictionary is a mutable collection that stores data in key-value pairs.
+
+    student = {
+        "name": "Rahul",
+        "age": 18,
+        "city": "Delhi"
+    }
+    print(student)
+
+O/P : {'name': 'Rahul', 'age': 18, 'city': 'Delhi'}
+
+=========================
+| Collection Comparison |
+=========================
+__________________________________________________________
+| Feature          | List | Tuple | Set  | Dictionary    |
+| ---------------- | ---- | ----- | ---- | ------------- |
+| Ordered          | Yes  | Yes   | No   | Yes           |
+| Mutable          | Yes  | No    | Yes  | Yes           |
+| Duplicate Values | Yes  | Yes   | No   | Values Yes    |
+| Duplicate Keys   | —    | —     | —    | No            |
+| Indexing         | Yes  | Yes   | No   | By Key        |
+| Syntax           | `[]` | `()`  | `{}` | `{key:value}` |
+----------------------------------------------------------
+
+Mutable vs Immutable
+--------------------
+👉 Mutable: An object whose contents can be modified after creation.  List, Set, Dictionary
+👉 Immutable: An object whose contents cannot be modified after creation. Tuple, String, Integer, Float
