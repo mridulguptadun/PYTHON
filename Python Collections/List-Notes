@@ -225,5 +225,70 @@ _________________________________________________
 -------------------------------------------------
 
 
+=======================
+| Python List Slicing |
+=======================
+👉 List Slicing is the process of extracting a portion of a list by specifying a start index, stop index, and optional step value.
+
+list_name[start : stop : step]
+
+start -> The starting index from where slicing begins (inclusive).  Included
+stop -> The ending index where slicing stops (exclusive).   Excluded
+step -> The interval between selected elements.
+
+numbers = [10,20,30,40,50,60]
+print(numbers[1:4])
+O/P : [20, 30, 40]
+
+print(numbers[0:3])
+O/P : [10,20,30]
+
+print(numbers[:4])
+O/P : [10,20,30,40]
+
+print(numbers[2:])
+O/P : [30,40,50,60]
+
+print(numbers[:])     # Whole List copy
+O/P : [10,20,30,40,50,60]
+
+print(numbers[0:6:2])
+O/P : [10,30,50]
+
+print(numbers[0:6:3])
+O/P : [10,40]
+
+print(numbers[-5:-2])  # Negative Slicing
+O/P : [20,30,40]
+
+print(numbers[::-1])  # Reverse List
+O/P : [60,50,40,30,20,10]
+
+print(numbers[::2])  # Every Second Element
+O/P : [10,30,50]
+
+print(numbers[::3])   # Every Third Element
+O/P : [10,40]
+
+print(numbers[::-2])  # Reverse Every Second Element
+O/P : [60,40,20]
+
+
+===============
+| Quick Table |
+===============
+_______________________________________________
+| Slice        | Output                       |
+| ------------ | ---------------------------- |
+| `list[:]`    | Entire list (copy)           |
+| `list[1:4]`  | Index 1 to 3                 |
+| `list[:4]`   | Start to index 3             |
+| `list[3:]`   | Index 3 to end               |
+| `list[::2]`  | Every second element         |
+| `list[::-1]` | Reverse list                 |
+| `list[-3:]`  | Last three elements          |
+| `list[:-1]`  | All except last              |
+| `list[::-2]` | Reverse every second element |
+-----------------------------------------------
 
 
