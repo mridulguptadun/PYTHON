@@ -1,0 +1,246 @@
+==================
+| String Methods |
+==================
+👉 String methods are built-in functions used to perform different operations on strings such as changing case, 
+   searching, replacing, splitting, formatting, and checking string content.
+
+1. upper() -> Converts all characters of a string into uppercase letters.
+
+  text = "python programming"
+  print(text.upper())
+
+Output
+PYTHON PROGRAMMING
+
+2. lower() -> Converts all characters into lowercase letters.
+
+  text = "PYTHON"
+  print(text.lower())
+
+Output
+python
+
+3. title() -> Converts the first letter of every word into uppercase.
+
+  text = "python programming language"
+  print(text.title())
+
+Output
+Python Programming Language
+
+4. capitalize() -> Converts only the first character of the string into uppercase.
+
+  text = "python programming"
+  print(text.capitalize())
+
+Output
+Python programming
+
+5. swapcase() -> Changes uppercase letters to lowercase and lowercase letters to uppercase.
+
+  text = "PyThOn"
+  print(text.swapcase())
+
+Output
+pYtHoN
+
+6. casefold() -> Converts a string to lowercase for case-insensitive comparisons.
+
+  text = "HELLO"
+  print(text.casefold())
+
+Output
+hello
+
+7. strip() -> Removes spaces from both sides of the string.
+
+  text = "   Python   "
+  print(text.strip())
+
+Output
+Python
+
+8. lstrip() -> Removes spaces from the left side.
+
+  text = "   Python"
+  print(text.lstrip())
+
+Output
+Python
+
+9. rstrip() -> Removes spaces from the right side.
+
+  text = "Python   "
+  print(text.rstrip())
+
+Output
+Python
+
+10. replace() -> Replaces one substring with another.
+
+  text = "I Love Java"
+  print(text.replace("Java", "Python"))
+
+Output
+I Love Python
+
+11. find() -> Returns the index of the first occurrence of a substring. Returns -1 if not found.
+
+  text = "Python"
+  print(text.find("t"))
+
+Output
+2
+
+12. index() -> Returns the index of a substring. Raises an error if not found.
+
+  text = "Python"
+  print(text.index("o"))
+
+Output
+4
+
+Difference Between find() and index()
+--------------------------------------
+find()	index() -> Returns -1 if not found	Raises ValueError if not found Safer to use	Use when value is guaranteed
+
+13. count() -> Counts the number of occurrences of a substring.
+
+  text = "banana"
+  print(text.count("a"))
+
+Output
+3
+
+14. startswith() -> Checks whether the string starts with a given value.
+
+  text = "Python"
+  print(text.startswith("Py"))
+
+Output
+True
+
+15. endswith() -> Checks whether the string ends with a given value.
+
+  text = "Python"
+  print(text.endswith("on"))
+
+Output
+True
+
+16. split() -> Splits a string into a list.
+
+  text = "Python Java C++"
+  print(text.split())
+
+Output
+['Python', 'Java', 'C++']
+
+17. join() -> Joins elements of an iterable into a single string.
+
+  languages = ["Python", "Java", "C++"]
+  print(" - ".join(languages))
+
+Output
+Python - Java - C++
+
+18. isalpha() -> Returns True if all characters are alphabets.
+
+  print("Python".isalpha())
+
+Output
+True
+
+19. isdigit() -> Returns True if all characters are digits.
+
+  print("12345".isdigit())
+
+Output
+True
+
+20. isnumeric() -> Returns True if all characters are numeric.
+
+  print("123".isnumeric())
+
+Output
+True
+
+21. isalnum() -> Returns True if the string contains only letters and numbers.
+
+  print("Python123".isalnum())
+
+Output
+True
+
+22. islower() -> Returns True if all letters are lowercase.
+
+  print("python".islower())
+
+Output
+True
+
+23. isupper() -> Returns True if all letters are uppercase.
+
+  print("PYTHON".isupper())
+
+Output
+True
+
+24. istitle() -> Returns True if every word starts with an uppercase letter.
+
+  print("Python Programming".istitle())
+
+Output
+True
+
+25. isspace() -> Returns True if the string contains only whitespace.
+
+  print("   ".isspace())
+
+Output
+True
+
+26. center() -> Centers the string within the specified width.
+
+  print("Python".center(20, "-"))
+
+Output
+-------Python-------
+
+27. ljust() -> Left-aligns the string.
+
+  print("Python".ljust(15, "*"))
+
+Output
+Python*********
+
+28. rjust() -> Right-aligns the string.
+
+  print("Python".rjust(15, "*"))
+
+Output
+*********Python
+
+29. zfill() -> Pads the string with leading zeros.
+
+  print("25".zfill(5))
+
+Output
+00025
+
+30. format() -> Formats values into a string.
+
+  name = "Mridul"
+  marks = 95
+  print("Name: {}, Marks: {}".format(name, marks))
+
+Output
+Name: Mridul, Marks: 95
+
+31. encode() -> Converts a string into bytes.
+
+  text = "Python"
+  print(text.encode())
+
+Output
+b'Python'
