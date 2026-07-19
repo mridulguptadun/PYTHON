@@ -1,0 +1,102 @@
+=============
+| os Module |
+=============
+👉 The os module provides functions to interact with the Operating System, allowing you to work with files, 
+   folders, and directories.
+
+-----------------------
+| Important Functions |
+-----------------------
+____________________________________________________
+| Function           | Purpose                     |
+| ------------------ | --------------------------- |
+| `os.getcwd()`      | Current working directory   |
+| `os.chdir()`       | Change directory            |
+| `os.mkdir()`       | Create a folder             |
+| `os.makedirs()`    | Create nested folders       |
+| `os.rmdir()`       | Remove an empty folder      |
+| `os.remove()`      | Delete a file               |
+| `os.rename()`      | Rename file/folder          |
+| `os.listdir()`     | Show files and folders      |
+| `os.path.exists()` | Check whether a path exists |
+----------------------------------------------------
+
+👉 os.getcwd() -> Returns the current working directory.
+
+  import os
+  print(os.getcwd())
+
+O/P : C:\Users\Mridul\Python
+
+👉 os.mkdir() -> Creates one folder.
+
+  import os
+  os.mkdir("Student")
+
+O/P : Student
+
+👉 os.makedirs() -> Creates multiple nested folders.
+
+  import os
+  os.makedirs("School/Class12/Python")
+
+O/P : 
+School
+ └── Class12
+      └── Python
+
+👉 os.rmdir() -> Deletes an empty folder.
+
+  import os
+  os.rmdir("Student")
+
+👉 os.remove() -> Deletes a file.
+
+  import os
+  os.remove("student.txt")
+
+👉 os.rename() -> Renames a file or folder.
+
+  import os
+  os.rename("Student", "Students")
+
+👉 os.listdir() -> Shows all files and folders in a directory.
+
+  import os
+  print(os.listdir())
+
+O/P : ['main.py', 'student.txt', 'Students']
+
+👉 os.path.exists() -> Checks whether a file or folder exists.
+
+  import os
+  print(os.path.exists("student.txt"))
+
+O/P : True
+
+----------------------------------------------------------------------------------------
+
+Real-Life Example
+
+Python/
+│
+├── main.py
+├── students.csv
+├── student.dat
+└── notes.txt
+
+You can use the os module to:
+
+👉 Create a new folder.
+👉 Rename notes.txt.
+👉 Delete student.dat.
+👉 Check if students.csv exists.
+👉 Display all files in the folder.
+
+Advantages of os
+
+👉 Works with files and folders.
+👉 Cross-platform (Windows, Linux, macOS).
+👉 Useful for automation.
+👉 Built into Python.
+
