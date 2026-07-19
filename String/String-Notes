@@ -1,1 +1,226 @@
+==========
+| String |
+==========
+👉 String is a sequence of characters enclosed inside single quotes (' '), double quotes (" "), or triple quotes (''' ''' / """ """).
+👉 A string is a collection of characters used to store text data.
+
+Single Quotes
+--------------
+name = 'Python'
+print(name)
+
+Double Quotes
+--------------
+language = "Python"
+print(language)
+
+Triple Quotes -> Used for Multi-line String
+--------------
+text = """Welcome
+to
+Python"""
+print(text)
+
+-----------------------------
+| Characteristics of String |
+-----------------------------
+👉 Ordered -> Characters ka order fix hota hai.
+    word = "Python"
+
+👉 Immutable -> String ko create karne ke baad uska character directly change nahi kar sakte.
+    name = "Python"
+    name[0] = "J"
+
+O/P : TypeError
+
+👉 Iterable -> Loops can use
+    word = "Python"
+    for i in word:
+        print(i)
+
+O/P : P
+      y
+      t
+      h
+      o
+      n
+
+👉 Indexing Supported
+    text = "Python"
+    print(text[0])
+    print(text[3])
+    print(text[-1])
+
+O/P : P
+      h
+      n
+
+Positive Indexing / Negative Indexing
+--------------------------------------
+P  y  t  h  o  n
+0  1  2  3  4  5
+
+  text = "Python"
+  print(text[0])
+  print(text[2])
+  print(text[5])
+
+O/P : P
+      t
+      n
+
+P  y  t  h  o  n
+-6 -5 -4 -3 -2 -1
+
+  text = "Python"
+  print(text[-1])
+  print(text[-2])
+  print(text[-6])
+
+O/P : n
+      o
+      P
+
+👉 String Length -> Use len()
+
+    text = "Python"
+    print(len(text))
+
+O/P : 6
+
+👉 String Concatenation (+) -> joining two string
+
+    first = "Hello"
+    second = "World"
+    print(first + " " + second)
+
+O/P : Hello World
+
+👉 String Repetition (*)
+
+    print("Python " * 3)
+
+O/P : Python Python Python
+
+Membership Operator
+--------------------
+👉 in
+
+    text = "Python"
+    print("P" in text)
+    print("o" in text)
+
+O/P :  True
+       True
+
+👉 not in
+
+    text = "Python"
+    print("z" not in text)
+
+O/P : True
+
+
+String Slicing
+---------------
+string[start : stop : step]
+
+P y t h o n
+0 1 2 3 4 5
+text = "Python"
+print(text[0:3])  # Pyt
+print(text[2:5])  # tho
+print(text[3:])   # hon
+print(text[::-1])  # Reverse String
+
+---------------------
+| Escape Characters |
+---------------------
+_________________________
+| Escape | Meaning      |
+| ------ | ------------ |
+| `\n`   | New Line     |
+| `\t`   | Tab          |
+| `\\`   | Backslash    |
+| `\"`   | Double Quote |
+| `\'`   | Single Quote |
+-------------------------
+
+===========================
+| Common String Functions |
+===========================
+1. upper()
+
+  text = "python"
+  print(text.upper())  # PYTHON
+
+2. lower()
+
+  text = "PYTHON"
+  print(text.lower()) # python
+
+3. title()
+
+  text = "hello world"
+  print(text.title()) # Hello World
+
+4. capitalize()
+
+  text = "python programming"
+  print(text.capitalize())  # Python programming
+
+5. strip()
+
+  text = "   Python   "
+  print(text.strip())   # Python
+
+6. replace()
+
+  text = "Hello World"
+  print(text.replace("World", "Python"))  # Hello Python
+
+7. find()
+
+  text = "Python"
+  print(text.find("t"))  # 2
+
+8. count()
+
+  text = "banana"
+  print(text.count("a"))  # 3
+
+9. startswith()
+
+  text = "Python"
+  print(text.startswith("Py")) # true
+
+10. endswith()
+
+  text = "Python"
+  print(text.endswith("on"))  # true
+
+11. split()
+
+  text = "Python Java C++"
+  print(text.split())   # ['Python', 'Java', 'C++']
+
+12. join()
+
+  words = ["Python", "Java", "C++"]
+  print(", ".join(words))  # Python, Java, C++
+
+Comparison of Strings
+----------------------
+  print("apple" == "apple")  # True
+  print("apple" != "banana")   # True
+  print("abc" < "xyz")      # True
+
+👉 String is a sequence of characters.
+👉 Strings are enclosed in single, double, or triple quotes.
+👉 Strings are immutable (cannot be modified directly).
+👉 Strings support indexing and slicing.
+👉 Strings are iterable, so they can be used in loops.
+👉 Common operations include concatenation (+), repetition (*), and membership (in, not in).
+👉 Frequently used methods include upper(), lower(), strip(), replace(), find(), split(), and join().
+
 
