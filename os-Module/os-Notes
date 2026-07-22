@@ -1,0 +1,37 @@
+👉 The os module is a built-in Python module that provides functions to interact with the operating system, such as creating files and folders, 
+    managing directories, renaming files, deleting files, and accessing system information.
+
+Python Program
+        │
+        ▼
+   os Module
+        │
+        ▼
+Windows / Linux / macOS
+
+  👉 Built-in module
+  👉 No installation required
+  👉 Works on Windows, Linux and macOS
+  👉 File Management
+  👉 Directory Management
+  👉 Path Management
+  👉 Environment Variables
+  👉 Execute System Commands
+  👉 Access System Information
+
+Advantages
+-----------
+  👉 Easy to use
+  👉 Fast
+  👉 Built-in
+  👉 Cross-platform
+  👉 Powerful
+  👉 Useful in automation
+
+Summary
+--------
+ 👉 os is a built-in Python module.
+ 👉 It helps Python interact with the Operating System.
+ 👉 It is commonly used for file handling, folder management, path operations, automation, and system-related tasks.
+ 👉 It works on Windows, Linux, and macOS.
+
