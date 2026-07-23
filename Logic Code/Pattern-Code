@@ -1,1 +1,378 @@
+*
+**
+***
+****
+*****
 
+i = 1
+while i <= 5:
+    j = 1
+    while j <= i:
+        print("*", end="")
+        j += 1
+    print()
+    i += 1
+---------------------------------------------
+*****
+****
+***
+**
+*
+
+i = 5
+while i >= 1:
+    j = 1
+    while j <= i:
+        print("*", end="")
+        j += 1
+    print()
+    i -= 1
+----------------------------------------------
+1
+12
+123
+1234
+12345
+
+i = 1
+while i <= 5:
+    j = 1
+    while j <= i:
+        print(j, end="")
+        j += 1
+    print()
+    i += 1
+----------------------------------------------
+12345
+1234
+123
+12
+1
+
+i = 5
+while i >= 1:
+    j = 1
+    while j <= i:
+        print(j, end="")
+        j += 1
+    print()
+    i -= 1
+----------------------------------------------
+5
+54
+543
+5432
+54321
+
+i = 1
+while i <= 5:
+    j = 5
+    while j >= 6 - i:
+        print(j, end="")
+        j -= 1
+    print()
+    i += 1
+----------------------------------------------
+55555
+4444
+333
+22
+1
+
+i = 5
+while i >= 1:
+    j = 1
+    while j <= i:
+        print(i, end="")
+        j += 1
+    print()
+    i -= 1
+----------------------------------------------
+1
+22
+333
+4444
+55555
+
+i = 1
+while i <= 5:
+    j = 1
+    while j <= i:
+        print(i, end="")
+        j += 1
+    print()
+    i += 1
+-----------------------------------------------
+A
+AB
+ABC
+ABCD
+ABCDE
+
+i = 1
+while i <= 5:
+    j = 65
+    while j < 65 + i:
+        print(chr(j), end="")
+        j += 1
+    print()
+    i += 1
+------------------------------------------------
+ABCDE
+ABCD
+ABC
+AB
+A
+
+i = 5
+while i >= 1:
+    j = 65
+    while j < 65 + i:
+        print(chr(j), end="")
+        j += 1
+    print()
+    i -= 1
+------------------------------------------------
+11111
+2222
+333
+44
+5
+
+i = 1
+
+while i <= 5:
+    j = 5
+
+    while j >= i:
+        print(i, end="")
+        j -= 1
+
+    print()
+    i += 1
+-------------------------------------------------
+54321
+5432
+543
+54
+5
+
+i = 5
+while i >= 1:
+    j = 5
+    while j >= i:
+        print(j, end="")
+        j -= 1
+    print()
+    i -= 1
+-------------------------------------------------
+5
+45
+345
+2345
+12345
+
+i = 5
+while i >= 1:
+    j = i
+    while j <= 5:
+        print(j, end="")
+        j += 1
+    print()
+    i -= 1
+-------------------------------------------------
+1
+21
+321
+4321
+54321
+
+i = 1
+while i <= 5:
+    j = i
+    while j >= 1:
+        print(j, end="")
+        j -= 1
+    print()
+    i += 1
+--------------------------------------------------
+54321
+4321
+321
+21
+1
+
+i = 5
+while i >= 1:
+    j = i
+    while j >= 1:
+        print(j, end="")
+        j -= 1
+    print()
+    i -= 1
+----------------------------------------------------
+1
+23
+456
+78910
+
+i = 1
+num = 1
+
+while i <= 4:
+    j = 1
+    while j <= i:
+        print(num, end=" ")
+        num += 1
+        j += 1
+    print()
+    i += 1
+----------------------------------------------------
+*****
+*   *
+*   *
+*   *
+*****
+
+i = 1
+while i <= 5:
+    j = 1
+    while j <= 5:
+        if i == 1 or i == 5 or j == 1 or j == 5:
+            print("*", end="")
+        else:
+            print(" ", end="")
+        j += 1
+    print()
+    i += 1
+-----------------------------------------------------
+    *
+   **
+  ***
+ ****
+*****
+
+i = 1
+
+while i <= 5:
+    space = 5 - i
+    while space > 0:
+        print(" ", end="")
+        space -= 1
+
+    star = 1
+    while star <= i:
+        print("*", end="")
+        star += 1
+
+    print()
+    i += 1
+-----------------------------------------------------
+*****
+ ****
+  ***
+   **
+    *
+
+i = 5
+while i >= 1:
+    space = 5 - i
+    while space > 0:
+        print(" ", end="")
+        space -= 1
+
+    star = 1
+    while star <= i:
+        print("*", end="")
+        star += 1
+
+    print()
+    i -= 1
+-----------------------------------------------------
+1
+2 2
+3 3 3
+4 4 4 4
+
+i = 1
+while i <= 4:
+    j = 1
+    while j <= i:
+        print(i, end=" ")
+        j += 1
+    print()
+    i += 1
+-----------------------------------------------------
+A
+BB
+CCC
+DDDD
+
+i = 0
+
+while i < 4:
+    j = 0
+    while j <= i:
+        print(chr(65 + i), end="")
+        j += 1
+    print()
+    i += 1
+-------------------------------------------------------
+1
+01
+101
+0101
+10101
+
+*
+* *
+* * *
+* * * *
+
+1
+121
+12321
+1234321
+
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+
+
+👉 Increasing Stars
+👉 Decreasing Stars
+👉 Increasing Numbers
+👉 Decreasing Numbers
+👉 Same Number Triangle
+👉 Reverse Same Number
+👉 Alphabet Triangle
+👉 Reverse Alphabet
+👉 Floyd Triangle
+👉 Hollow Square
+👉 Right Pyramid
+👉 Inverted Pyramid
+👉 Full Pyramid
+👉 Inverted Full Pyramid
+👉 Diamond
+👉 Hollow Diamond
+👉 Pascal Triangle
+👉 Butterfly Pattern
+👉 Hourglass Pattern
+👉 X Pattern
+👉 Plus Pattern
+👉 Hollow Rectangle
+👉 Binary Triangle
+👉 Character Pyramid
+👉 Palindrome Number Pattern
+👉 Reverse Palindrome Pattern
+👉 Zig-Zag Pattern
+👉 Cross Pattern
+👉 Sandglass Pattern
+👉 Heart Pattern
