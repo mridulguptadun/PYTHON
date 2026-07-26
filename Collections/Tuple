@@ -1,0 +1,48 @@
+👉 Tuple is an ordered, immutable collection of elements in Python. It can store multiple values of different data types in a single variable.
+  👉 Ordered
+  👉 Immutable
+  👉 Allows duplicate values
+  👉 Can store multiple data types
+  👉 Indexed
+  👉 Supports slicing
+  👉 Faster than List (generally)
+
+t = ()
+print(t)   # Empty Tuple
+
+student = ("Rahul", 18, 92.5, True)  # Mixed Data Types
+print(student)
+
+data = ((1, 2), (3, 4), (5, 6))  # Nested Tuple
+print(data)
+
+t = 10, 20, 30          # Creating Tuple Without Parentheses
+print(t)
+print(type(t))
+
+numbers = tuple([1, 2, 3, 4])      # Using tuple() Constructor
+print(numbers)
+
+  👉 Tuple is an ordered collection.
+  👉 Tuple is immutable.
+  👉 Duplicate values are allowed.
+  👉 Different data types can be stored together.
+  👉 Parentheses () are commonly used.
+  👉 A single-element tuple must have a trailing comma.
+  👉 tuple() constructor can convert other iterables into tuples.
+
+--------------------------------
+| Indexing & Negative Indexing |
+--------------------------------
+👉 Indexing is the process of accessing individual elements of a tuple using their position (index).
+
+  Tuple = ("Apple", "Banana", "Mango", "Orange")
+  Index =   0         1         2         3
+
+  fruits = ("Apple", "Banana", "Mango", "Orange")
+  print(fruits[0])
+
+
+  Tuple = ("Apple", "Banana", "Mango", "Orange")          # Negative Indexing
+  Positive Index :  0        1         2         3
+  Negative Index : -4       -3        -2        -1
