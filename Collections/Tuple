@@ -41,18 +41,34 @@ print(numbers)
 
   fruits = ("Apple", "Banana", "Mango", "Orange")
   print(fruits[0])
-
-
+-------------------------------------------------------------
   Tuple = ("Apple", "Banana", "Mango", "Orange")          # Negative Indexing
   Positive Index :  0        1         2         3
   Negative Index : -4       -3        -2        -1
-
+---------------------------------------------------------------
   fruits = ("Apple", "Banana", "Mango", "Orange")
   print(fruits[-1])
-
-  data = (               # Accessing Nested Tuple Elements
-      ("Rahul", 18),
-      ("Aman", 20),
-      ("Priya", 19)
+----------------------------------------------------------------
+  data = (               # Access Nested Tuple Elements
+      ("Rahul", 20),
+      ("Aman", 21),
+      ("Priya", 22)
   )
-  print(data[0])
+  
+  print(data[0][0])
+  print(data[0][1])
+  
+  print(data[1][0])
+  print(data[1][1])
+  
+  print(data[2][0])
+  print(data[2][1])
+------------------------------------------------
+  fruits = ("Apple", "Banana", "Mango")
+  for fruit in fruits:
+      print(fruit)
+-----------------------------------------------
+fruits = ("Apple", "Banana", "Mango")  # Loop with Index
+for i in range(len(fruits)):
+    print(i, fruits[i])
+----------------------------------------------
