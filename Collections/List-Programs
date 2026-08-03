@@ -218,3 +218,54 @@
             break
         else:
             print("Invalid Choice!")
+-------------------------------------------------------------------------------
+l = []
+n = int(input("Enter Range of List Elements : "))
+print("Range of Elements : ",n)
+for i in range(n):
+	ele = int(input("Enter Element : "))
+	l.append(ele)
+print("List Of Elements :", l)
+
+while True:
+	print("======LIST METHODS======")
+	print("1. Append Item")
+	print("2. Insert Item")
+	print("3. Remove Item")
+	print("4. Sort List")
+	print("5. Copy List")
+	print("6. Exit")
+	choice = int(input("Enter Your Choice : "))
+
+	if choice == 1:
+		element = int(input("Enter Element to Append in List : "))
+		l.append(element)
+		print("New List : ",l)
+
+	elif choice == 2:
+		element = int(input("Enter New Element to Insert in List : "))
+		val = int(input("Enter Position where u want to insert new element : "))
+		l.insert(val,element)
+		print("New List : ",l)
+
+	elif choice == 3:
+		element = int(input("Enter Element which u want to remove form List : "))
+		l.remove(element)
+		print("New List : ",l)
+
+	elif choice == 4:
+		l.sort()
+		print("Sorted List : ",l)
+
+	elif choice == 5:
+		l2 = l.copy()
+		print("Copy List : ",l2)
+		print("Original List : ",l)
+
+	elif choice == 6:
+		break
+
+	else :
+		print("Wrong Choice")
+
+
