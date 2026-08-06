@@ -1,0 +1,53 @@
+👉 Enum ek special class hoti hai jisme fixed values store hoti hain.
+
+  from enum import Enum
+  
+  class Status(Enum):
+      APPROVED = 1
+      PENDING = 2
+      REJECTED = 3
+  
+  status = Status.APPROVED
+  
+  if status == Status.APPROVED:
+      print("Admission Done")
+
+👉 Enums improve code readability by replacing magic values with meaningful names.
+
+Advantages
+  👉 Better readability
+  👉 Prevent invalid values
+  👉 Easy comparison
+  👉 Easy maintenance
+  👉 Less typing mistakes
+  👉 Cleaner code
+  👉 Better debugging
+  👉 Better IDE support
+
+Disadvantages
+  👉 Slightly more code
+  👉 Not suitable for frequently changing values
+  👉 Requires importing enum
+
+Where Enum is Used
+  👉 User Roles
+  👉 Payment Status
+  👉 Order Status
+  👉 Gender
+  👉 Traffic Signal
+  👉 Days
+  👉 Months
+  👉 Directions
+  👉 HTTP Status
+  👉 Game States
+  👉 School ERP Status
+
+===========
+| Summary |
+===========
+👉 Enum is a special class for creating named constants.
+👉 It is imported using from enum import Enum.
+👉 Each enum member has a .name and a .value.
+👉 Enums make code cleaner, safer, and easier to maintain.
+👉 They are ideal for fixed values like roles, statuses, colors, days, and months.
+
