@@ -51,3 +51,71 @@ Where Enum is Used
 👉 Enums make code cleaner, safer, and easier to maintain.
 👉 They are ideal for fixed values like roles, statuses, colors, days, and months.
 
+👉 Integer Enum => An Integer Enum is an enumeration where each member is assigned an integer value.
+
+    from enum import Enum
+    class Status(Enum):
+        PENDING = 1
+        APPROVED = 2
+        REJECTED = 3
+    print(Status.APPROVED)
+    print(Status.APPROVED.name)
+    print(Status.APPROVED.value)
+---------------------------------------------
+  from enum import Enum
+  class StudentStatus(Enum):
+      ACTIVE = 1
+      INACTIVE = 2
+      SUSPENDED = 3
+  student = StudentStatus.ACTIVE
+  print(student)
+
+👉 String Enum => A String Enum stores string values instead of integers.
+
+    from enum import Enum
+    class Gender(Enum):
+        MALE = "Male"
+        FEMALE = "Female"
+        OTHER = "Other"
+    print(Gender.MALE)
+    print(Gender.MALE.value)
+
+👉 Mixed Values
+
+    from enum import Enum
+    class Demo(Enum):
+        A = 1
+        B = "Hello"
+        C = 3.14
+    print(Demo.B.value)
+
+👉 Using auto() => The auto() function automatically assigns values to Enum members.
+
+    from enum import Enum, auto
+    class Color(Enum):
+        RED = auto()
+        GREEN = auto()
+        BLUE = auto()
+    print(Color.RED.value)
+    print(Color.GREEN.value)
+    print(Color.BLUE.value)
+
+👉 Prevent Duplicate Values (@unique) => The @unique decorator ensures that all Enum values are unique. 
+                                          If duplicate values exist, Python raises a ValueError.
+
+    from enum import Enum, unique
+    @unique
+    class Fruit(Enum):
+        APPLE = 1
+        MANGO = 2
+        ORANGE = 2
+    print(Fruit.ORANGE)
+
+Summary
+  👉 Integer Enums store integer values.
+  👉 String Enums store string values.
+  👉 auto() automatically generates sequential values.
+  👉 Duplicate values create aliases by default.
+  👉 @unique prevents duplicate values.
+  👉 Prefer keeping all Enum values of the same data type for clean and maintainable code.
+
