@@ -1,0 +1,46 @@
+| Topic                         | Syntax / Example                            | Explanation                                                                         |
+| ----------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **What is a Function?**       | `def hello():`                              | A function is a reusable block of code designed to perform a specific task.         |
+| **Why use Functions?**        | `add()`                                     | Functions help make code **reusable, organized, readable, and easier to maintain**. |
+| **Creating a Function**       | `def greet():`<br>    `print("Hello")`      | Use the `def` keyword to create a function.                                         |
+| **`def` keyword**             | `def add():`                                | `def` tells Python that you are defining a function.                                |
+| **Function Name**             | `def add():`                                | `add` is the name of the function. Choose a meaningful name.                        |
+| **Parentheses `()`**          | `def add():`                                | Parentheses contain parameters. They can also be empty.                             |
+| **Colon `:`**                 | `def add():`                                | A colon marks the beginning of the function body.                                   |
+| **Indentation**               | `def add():`<br>    `print("Hi")`           | The function body must be indented. Usually 4 spaces are used.                      |
+| **Calling a Function**        | `greet()`                                   | Calling a function executes the code inside it.                                     |
+| **Simple Function**           | `def hello():`<br>    `print("Hello")`      | A function without parameters or a return value.                                    |
+| **Parameter**                 | `def greet(name):`                          | A parameter is a variable that receives a value when the function is called.        |
+| **Argument**                  | `greet("John")`                             | `"John"` is an argument passed to the `name` parameter.                             |
+| **One Parameter**             | `def square(n):`                            | The function accepts one value.                                                     |
+| **Multiple Parameters**       | `def add(a, b):`                            | A function can accept multiple parameters.                                          |
+| **Multiple Arguments**        | `add(10, 20)`                               | `10` and `20` are arguments passed to `a` and `b`.                                  |
+| **`return`**                  | `return a + b`                              | `return` sends a value back from the function.                                      |
+| **Return Value**              | `result = add(10, 20)`                      | The returned value can be stored in a variable.                                     |
+| **`print()` vs `return`**     | `print(a+b)` / `return a+b`                 | `print()` displays a value; `return` sends the value back to the caller.            |
+| **Function without `return`** | `def hello():`<br>    `print("Hi")`         | If there is no explicit `return`, Python returns `None`.                            |
+| **Default Parameter**         | `def greet(name="User"):`                   | A default value is used when no argument is provided.                               |
+| **Default Parameter Example** | `greet()`                                   | Output: `User`                                                                      |
+| **Changing Default Value**    | `greet("John")`                             | The provided argument replaces the default value.                                   |
+| **Positional Arguments**      | `add(10, 20)`                               | Arguments are matched according to their position.                                  |
+| **Keyword Arguments**         | `add(a=10, b=20)`                           | Arguments are passed using parameter names.                                         |
+| **`*args`**                   | `def add(*numbers):`                        | Allows a function to accept any number of positional arguments.                     |
+| **`*args` Example**           | `add(1, 2, 3, 4)`                           | The values are received as a tuple.                                                 |
+| **`**kwargs`**                | `def info(**data):`                         | Allows a function to accept any number of keyword arguments.                        |
+| **`**kwargs` Example**        | `info(name="John", age=20)`                 | The values are received as a dictionary.                                            |
+| **Local Variable**            | `def test():`<br>    `x = 10`               | A variable created inside a function is normally local to that function.            |
+| **Global Variable**           | `x = 10`<br>`def test():`<br>    `print(x)` | A variable created outside a function is a global variable.                         |
+| **`global` Keyword**          | `global x`                                  | Used when you need to modify a global variable from inside a function.              |
+| **Multiple Return Values**    | `return a, b`                               | Python can return multiple values, usually packed into a tuple.                     |
+| **Calling Another Function**  | `def first():`<br>    `second()`            | One function can call another function.                                             |
+| **Nested Function**           | `def outer():`<br>    `def inner():`        | A function defined inside another function.                                         |
+| **Recursive Function**        | `def count(n):`<br>    `count(n-1)`         | A function that calls itself is called a recursive function.                        |
+| **Lambda Function**           | `square = lambda x: x*x`                    | A small anonymous function, usually containing one expression.                      |
+| **Function as Variable**      | `x = greet`                                 | Functions can be assigned to variables because functions are objects in Python.     |
+| **Function as Argument**      | `calculate(add)`                            | A function can be passed as an argument to another function.                        |
+| **Built-in Function**         | `len("Hello")`                              | Functions already provided by Python, such as `len()`, `sum()`, `max()`, etc.       |
+| **User-defined Function**     | `def my_function():`                        | A function created by the programmer.                                               |
+| **Docstring**                 | `"""Calculate the sum"""`                   | A description/documentation written inside a function.                              |
+| **Type Hints**                | `def add(a: int, b: int) -> int:`           | Type hints indicate the expected parameter and return types.                        |
+| **Function Scope**            | `def test():`                               | Scope determines where variables created inside a function can be accessed.         |
+| **Reusable Code**             | `add(2, 3)`<br>`add(5, 6)`                  | The same function can be called many times with different values.                   |
