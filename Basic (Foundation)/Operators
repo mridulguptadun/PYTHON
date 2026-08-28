@@ -1,1 +1,44 @@
 
+| Category                 | Operator | Example                       | Meaning / Explanation                                              |
+| ------------------------ | -------- | ----------------------------- | ------------------------------------------------------------------ |
+| **Arithmetic**           | `+`      | `10 + 5` → `15`               | Addition                                                           |
+| **Arithmetic**           | `-`      | `10 - 5` → `5`                | Subtraction                                                        |
+| **Arithmetic**           | `*`      | `10 * 5` → `50`               | Multiplication                                                     |
+| **Arithmetic**           | `/`      | `10 / 5` → `2.0`              | True division; normally returns a float                            |
+| **Arithmetic**           | `//`     | `10 // 3` → `3`               | Floor division; returns the floor of the quotient                  |
+| **Arithmetic**           | `%`      | `10 % 3` → `1`                | Modulus; returns the remainder                                     |
+| **Arithmetic**           | `**`     | `2 ** 3` → `8`                | Exponentiation / power                                             |
+| **Unary**                | `+`      | `+5` → `5`                    | Positive value                                                     |
+| **Unary**                | `-`      | `-5` → `-5`                   | Negative value                                                     |
+| **Comparison**           | `==`     | `10 == 10` → `True`           | Checks whether two values are equal                                |
+| **Comparison**           | `!=`     | `10 != 5` → `True`            | Checks whether two values are not equal                            |
+| **Comparison**           | `>`      | `10 > 5` → `True`             | Greater than                                                       |
+| **Comparison**           | `<`      | `10 < 5` → `False`            | Less than                                                          |
+| **Comparison**           | `>=`     | `10 >= 10` → `True`           | Greater than or equal to                                           |
+| **Comparison**           | `<=`     | `5 <= 10` → `True`            | Less than or equal to                                              |
+| **Logical**              | `and`    | `x > 5 and x < 20`            | `True` only when both conditions are true                          |
+| **Logical**              | `or`     | `x < 5 or x > 20`             | `True` when at least one condition is true                         |
+| **Logical**              | `not`    | `not True` → `False`          | Reverses a Boolean result                                          |
+| **Assignment**           | `=`      | `x = 10`                      | Assigns a value to a variable                                      |
+| **Assignment**           | `+=`     | `x += 5`                      | Same as `x = x + 5`                                                |
+| **Assignment**           | `-=`     | `x -= 5`                      | Same as `x = x - 5`                                                |
+| **Assignment**           | `*=`     | `x *= 5`                      | Same as `x = x * 5`                                                |
+| **Assignment**           | `/=`     | `x /= 5`                      | Same as `x = x / 5`                                                |
+| **Assignment**           | `//=`    | `x //= 5`                     | Same as `x = x // 5`                                               |
+| **Assignment**           | `%=`     | `x %= 5`                      | Same as `x = x % 5`                                                |
+| **Assignment**           | `**=`    | `x **= 5`                     | Same as `x = x ** 5`                                               |
+| **Bitwise**              | `&`      | `5 & 3`                       | Bitwise AND                                                        |
+| **Bitwise**              | `\|`     | `5 \| 3`                      | Bitwise OR                                                         |
+| **Bitwise**              | `^`      | `5 ^ 3`                       | Bitwise XOR                                                        |
+| **Bitwise**              | `~`      | `~5`                          | Bitwise NOT / inversion                                            |
+| **Bitwise Shift**        | `<<`     | `5 << 1`                      | Shift bits to the left                                             |
+| **Bitwise Shift**        | `>>`     | `5 >> 1`                      | Shift bits to the right                                            |
+| **Membership**           | `in`     | `"a" in "apple"` → `True`     | Checks whether a value exists in a sequence/container              |
+| **Membership**           | `not in` | `"z" not in "apple"` → `True` | Checks whether a value does not exist                              |
+| **Identity**             | `is`     | `x is None`                   | Checks whether two references refer to the same object             |
+| **Identity**             | `is not` | `x is not None`               | Checks whether two references do not refer to the same object      |
+| **Matrix**               | `@`      | `A @ B`                       | Matrix multiplication; mainly used with numerical/matrix libraries |
+| **Walrus**               | `:=`     | `if (n := len(items)) > 0:`   | Assigns a value as part of an expression                           |
+| **Unpacking**            | `*`      | `a, *b = [1,2,3,4]`           | Collects remaining iterable elements                               |
+| **Dictionary Unpacking** | `**`     | `new = {**a, **b}`            | Unpacks dictionary key-value pairs                                 |
+____________________________________________________________________________________________________________________________________________
