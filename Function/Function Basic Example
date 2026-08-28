@@ -1,0 +1,698 @@
+# 1. Hello World
+def func1():
+    print("Hello World")
+
+
+# 2. Add two numbers
+def func2():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print("Sum =", a + b)
+
+
+# 3. Subtract two numbers
+def func3():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print("Difference =", a - b)
+
+
+# 4. Multiply two numbers
+def func4():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print("Product =", a * b)
+
+
+# 5. Divide two numbers
+def func5():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    if b != 0:
+        print("Division =", a / b)
+    else:
+        print("Cannot divide by zero")
+
+
+# 6. Even or Odd
+def func6():
+    n = int(input("Enter number: "))
+
+    if n % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+
+# 7. Positive or Negative
+def func7():
+    n = int(input("Enter number: "))
+
+    if n > 0:
+        print("Positive")
+    elif n < 0:
+        print("Negative")
+    else:
+        print("Zero")
+
+
+# 8. Greater of two numbers
+def func8():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    if a > b:
+        print(a, "is greater")
+    elif b > a:
+        print(b, "is greater")
+    else:
+        print("Both are equal")
+
+
+# 9. Largest of three numbers
+def func9():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    c = int(input("Enter third number: "))
+
+    if a >= b and a >= c:
+        print(a, "is largest")
+    elif b >= a and b >= c:
+        print(b, "is largest")
+    else:
+        print(c, "is largest")
+
+
+# 10. Smallest of three numbers
+def func10():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    c = int(input("Enter third number: "))
+
+    if a <= b and a <= c:
+        print(a, "is smallest")
+    elif b <= a and b <= c:
+        print(b, "is smallest")
+    else:
+        print(c, "is smallest")
+
+
+# 11. Square
+def func11():
+    n = int(input("Enter number: "))
+    print("Square =", n ** 2)
+
+
+# 12. Cube
+def func12():
+    n = int(input("Enter number: "))
+    print("Cube =", n ** 3)
+
+
+# 13. Power
+def func13():
+    n = int(input("Enter number: "))
+    p = int(input("Enter power: "))
+    print("Answer =", n ** p)
+
+
+# 14. Divisible by 5
+def func14():
+    n = int(input("Enter number: "))
+
+    if n % 5 == 0:
+        print("Divisible by 5")
+    else:
+        print("Not divisible by 5")
+
+
+# 15. Divisible by 5 and 11
+def func15():
+    n = int(input("Enter number: "))
+
+    if n % 5 == 0 and n % 11 == 0:
+        print("Divisible by both 5 and 11")
+    else:
+        print("Not divisible by both")
+
+
+# 16. Adult or Minor
+def func16():
+    age = int(input("Enter age: "))
+
+    if age >= 18:
+        print("Adult")
+    else:
+        print("Minor")
+
+
+# 17. Check Leap Year
+def func17():
+    year = int(input("Enter year: "))
+
+    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+        print("Leap Year")
+    else:
+        print("Not a Leap Year")
+
+
+# 18. Print 1 to 10
+def func18():
+    for i in range(1, 11):
+        print(i)
+
+
+# 19. Print 10 to 1
+def func19():
+    for i in range(10, 0, -1):
+        print(i)
+
+
+# 20. Multiplication Table
+def func20():
+    n = int(input("Enter number: "))
+
+    for i in range(1, 11):
+        print(n, "x", i, "=", n * i)
+
+
+# 21. Sum 1 to N
+def func21():
+    n = int(input("Enter number: "))
+    total = 0
+
+    for i in range(1, n + 1):
+        total += i
+
+    print("Sum =", total)
+
+
+# 22. Factorial
+def func22():
+    n = int(input("Enter number: "))
+    fact = 1
+
+    for i in range(1, n + 1):
+        fact *= i
+
+    print("Factorial =", fact)
+
+
+# 23. Count digits
+def func23():
+    n = int(input("Enter number: "))
+
+    count = 0
+
+    while n != 0:
+        n //= 10
+        count += 1
+
+    print("Number of digits =", count)
+
+
+# 24. Sum of digits
+def func24():
+    n = int(input("Enter number: "))
+    total = 0
+
+    while n != 0:
+        digit = n % 10
+        total += digit
+        n //= 10
+
+    print("Sum of digits =", total)
+
+
+# 25. Reverse number
+def func25():
+    n = int(input("Enter number: "))
+    reverse = 0
+
+    while n != 0:
+        digit = n % 10
+        reverse = reverse * 10 + digit
+        n //= 10
+
+    print("Reverse =", reverse)
+
+
+# 26. Palindrome number
+def func26():
+    n = int(input("Enter number: "))
+
+    original = n
+    reverse = 0
+
+    while n != 0:
+        digit = n % 10
+        reverse = reverse * 10 + digit
+        n //= 10
+
+    if original == reverse:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+
+# 27. Prime number
+def func27():
+    n = int(input("Enter number: "))
+
+    if n < 2:
+        print("Not Prime")
+        return
+
+    for i in range(2, n):
+        if n % i == 0:
+            print("Not Prime")
+            return
+
+    print("Prime")
+
+
+# 28. Print prime numbers
+def func28():
+    n = int(input("Enter limit: "))
+
+    for num in range(2, n + 1):
+        prime = True
+
+        for i in range(2, num):
+            if num % i == 0:
+                prime = False
+                break
+
+        if prime:
+            print(num)
+
+
+# 29. Fibonacci series
+def func29():
+    n = int(input("How many terms: "))
+
+    a = 0
+    b = 1
+
+    for i in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+    print()
+
+
+# 30. Find HCF / GCD
+def func30():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    while b != 0:
+        a, b = b, a % b
+
+    print("HCF =", a)
+
+
+# 31. Find LCM
+def func31():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    x = a
+    y = b
+
+    while y != 0:
+        x, y = y, x % y
+
+    hcf = x
+    lcm = abs(a * b) // hcf
+
+    print("LCM =", lcm)
+
+
+# 32. Area of rectangle
+def func32():
+    length = float(input("Enter length: "))
+    width = float(input("Enter width: "))
+
+    area = length * width
+
+    print("Area =", area)
+
+
+# 33. Perimeter of rectangle
+def func33():
+    length = float(input("Enter length: "))
+    width = float(input("Enter width: "))
+
+    perimeter = 2 * (length + width)
+
+    print("Perimeter =", perimeter)
+
+
+# 34. Area of square
+def func34():
+    side = float(input("Enter side: "))
+
+    print("Area =", side * side)
+
+
+# 35. Perimeter of square
+def func35():
+    side = float(input("Enter side: "))
+
+    print("Perimeter =", 4 * side)
+
+
+# 36. Area of circle
+def func36():
+    radius = float(input("Enter radius: "))
+
+    area = 3.14 * radius * radius
+
+    print("Area =", area)
+
+
+# 37. Circumference of circle
+def func37():
+    radius = float(input("Enter radius: "))
+
+    circumference = 2 * 3.14 * radius
+
+    print("Circumference =", circumference)
+
+
+# 38. Celsius to Fahrenheit
+def func38():
+    c = float(input("Enter Celsius: "))
+
+    f = (c * 9 / 5) + 32
+
+    print("Fahrenheit =", f)
+
+
+# 39. Fahrenheit to Celsius
+def func39():
+    f = float(input("Enter Fahrenheit: "))
+
+    c = (f - 32) * 5 / 9
+
+    print("Celsius =", c)
+
+
+# 40. Simple Interest
+def func40():
+    p = float(input("Enter Principal: "))
+    r = float(input("Enter Rate: "))
+    t = float(input("Enter Time: "))
+
+    si = (p * r * t) / 100
+
+    print("Simple Interest =", si)
+
+
+# 41. Count vowels
+def func41():
+    text = input("Enter text: ")
+
+    count = 0
+
+    for ch in text.lower():
+        if ch in "aeiou":
+            count += 1
+
+    print("Vowels =", count)
+
+
+# 42. Count characters
+def func42():
+    text = input("Enter text: ")
+
+    print("Characters =", len(text))
+
+
+# 43. Reverse string
+def func43():
+    text = input("Enter text: ")
+
+    print("Reverse =", text[::-1])
+
+
+# 44. Palindrome string
+def func44():
+    text = input("Enter text: ")
+
+    text = text.lower()
+
+    if text == text[::-1]:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+
+# 45. Check character is vowel
+def func45():
+    ch = input("Enter a character: ")
+
+    if ch.lower() in "aeiou":
+        print("Vowel")
+    else:
+        print("Not Vowel")
+
+
+# 46. Check character is alphabet
+def func46():
+    ch = input("Enter a character: ")
+
+    if ch.isalpha():
+        print("Alphabet")
+    else:
+        print("Not an Alphabet")
+
+
+# 47. Check number is divisible by 2 and 3
+def func47():
+    n = int(input("Enter number: "))
+
+    if n % 2 == 0 and n % 3 == 0:
+        print("Divisible by both 2 and 3")
+    else:
+        print("Not divisible by both")
+
+
+# 48. Sum of even numbers
+def func48():
+    n = int(input("Enter limit: "))
+    total = 0
+
+    for i in range(2, n + 1, 2):
+        total += i
+
+    print("Sum of even numbers =", total)
+
+
+# 49. Sum of odd numbers
+def func49():
+    n = int(input("Enter limit: "))
+    total = 0
+
+    for i in range(1, n + 1, 2):
+        total += i
+
+    print("Sum of odd numbers =", total)
+
+
+# 50. Calculator
+def func50():
+    a = float(input("Enter first number: "))
+    operator = input("Enter operator (+, -, *, /): ")
+    b = float(input("Enter second number: "))
+
+    if operator == "+":
+        print("Answer =", a + b)
+
+    elif operator == "-":
+        print("Answer =", a - b)
+
+    elif operator == "*":
+        print("Answer =", a * b)
+
+    elif operator == "/":
+        if b != 0:
+            print("Answer =", a / b)
+        else:
+            print("Cannot divide by zero")
+
+    else:
+        print("Invalid operator")
+
+
+# ==================================================
+#                    MAIN MENU
+# ==================================================
+
+while True:
+
+    print("\n========================================")
+    print("       50 PYTHON FUNCTION PROGRAMS")
+    print("========================================")
+
+    print("1.  Hello World")
+    print("2.  Add")
+    print("3.  Subtract")
+    print("4.  Multiply")
+    print("5.  Divide")
+    print("6.  Even / Odd")
+    print("7.  Positive / Negative")
+    print("8.  Greater of Two")
+    print("9.  Largest of Three")
+    print("10. Smallest of Three")
+    print("11. Square")
+    print("12. Cube")
+    print("13. Power")
+    print("14. Divisible by 5")
+    print("15. Divisible by 5 and 11")
+    print("16. Adult / Minor")
+    print("17. Leap Year")
+    print("18. Print 1 to 10")
+    print("19. Print 10 to 1")
+    print("20. Table")
+    print("21. Sum 1 to N")
+    print("22. Factorial")
+    print("23. Count Digits")
+    print("24. Sum of Digits")
+    print("25. Reverse Number")
+    print("26. Palindrome Number")
+    print("27. Prime Number")
+    print("28. Prime Numbers")
+    print("29. Fibonacci")
+    print("30. HCF")
+    print("31. LCM")
+    print("32. Rectangle Area")
+    print("33. Rectangle Perimeter")
+    print("34. Square Area")
+    print("35. Square Perimeter")
+    print("36. Circle Area")
+    print("37. Circle Circumference")
+    print("38. Celsius to Fahrenheit")
+    print("39. Fahrenheit to Celsius")
+    print("40. Simple Interest")
+    print("41. Count Vowels")
+    print("42. Count Characters")
+    print("43. Reverse String")
+    print("44. Palindrome String")
+    print("45. Vowel Check")
+    print("46. Alphabet Check")
+    print("47. Divisible by 2 and 3")
+    print("48. Sum of Even Numbers")
+    print("49. Sum of Odd Numbers")
+    print("50. Calculator")
+    print("0.  Exit")
+
+    choice = int(input("\nEnter your choice: "))
+
+    if choice == 1:
+        func1()
+    elif choice == 2:
+        func2()
+    elif choice == 3:
+        func3()
+    elif choice == 4:
+        func4()
+    elif choice == 5:
+        func5()
+    elif choice == 6:
+        func6()
+    elif choice == 7:
+        func7()
+    elif choice == 8:
+        func8()
+    elif choice == 9:
+        func9()
+    elif choice == 10:
+        func10()
+    elif choice == 11:
+        func11()
+    elif choice == 12:
+        func12()
+    elif choice == 13:
+        func13()
+    elif choice == 14:
+        func14()
+    elif choice == 15:
+        func15()
+    elif choice == 16:
+        func16()
+    elif choice == 17:
+        func17()
+    elif choice == 18:
+        func18()
+    elif choice == 19:
+        func19()
+    elif choice == 20:
+        func20()
+    elif choice == 21:
+        func21()
+    elif choice == 22:
+        func22()
+    elif choice == 23:
+        func23()
+    elif choice == 24:
+        func24()
+    elif choice == 25:
+        func25()
+    elif choice == 26:
+        func26()
+    elif choice == 27:
+        func27()
+    elif choice == 28:
+        func28()
+    elif choice == 29:
+        func29()
+    elif choice == 30:
+        func30()
+    elif choice == 31:
+        func31()
+    elif choice == 32:
+        func32()
+    elif choice == 33:
+        func33()
+    elif choice == 34:
+        func34()
+    elif choice == 35:
+        func35()
+    elif choice == 36:
+        func36()
+    elif choice == 37:
+        func37()
+    elif choice == 38:
+        func38()
+    elif choice == 39:
+        func39()
+    elif choice == 40:
+        func40()
+    elif choice == 41:
+        func41()
+    elif choice == 42:
+        func42()
+    elif choice == 43:
+        func43()
+    elif choice == 44:
+        func44()
+    elif choice == 45:
+        func45()
+    elif choice == 46:
+        func46()
+    elif choice == 47:
+        func47()
+    elif choice == 48:
+        func48()
+    elif choice == 49:
+        func49()
+    elif choice == 50:
+        func50()
+    elif choice == 0:
+        print("Program Ended.")
+        break
+    else:
+        print("Invalid Choice!")
