@@ -1,1 +1,403 @@
+# 1. Addition
+a, b = 10, 5
+print(a + b)
+
+# 2. Subtraction
+a, b = 10, 5
+print(a - b)
+
+# 3. Multiplication
+a, b = 10, 5
+print(a * b)
+
+# 4. Division
+a, b = 10, 5
+print(a / b)
+
+# 5. Floor Division
+a, b = 17, 5
+print(a // b)
+
+# 6. Remainder
+a, b = 17, 5
+print(a % b)
+
+# 7. Square
+n = 6
+print(n ** 2)
+
+# 8. Cube
+n = 4
+print(n ** 3)
+
+# 9. Square Root
+n = 81
+print(n ** 0.5)
+
+# 10. Average of Two Numbers
+a, b = 20, 30
+print((a + b) / 2)
+
+# 11. Average of Three Numbers
+a, b, c = 10, 20, 30
+print((a + b + c) / 3)
+
+# 12. Sum of Three Numbers
+a, b, c = 10, 20, 30
+print(a + b + c)
+
+# 13. Double a Number
+n = 25
+print(n * 2)
+
+# 14. Half a Number
+n = 50
+print(n / 2)
+
+# 15. Power
+base, exponent = 2, 5
+print(base ** exponent)
+
+# 16. Simple Interest (SI)
+p, r, t = 10000, 5, 2
+print((p * r * t) / 100)
+
+# 17. Total Amount with SI
+p, r, t = 10000, 5, 2
+si = (p * r * t) / 100
+print(p + si)
+
+# 18. Compound Interest (CI)
+p, r, t = 10000, 10, 2
+amount = p * (1 + r / 100) ** t
+print(amount - p)
+
+# 19. Compound Amount
+p, r, t = 10000, 10, 2
+print(p * (1 + r / 100) ** t)
+
+# 20. Profit
+cp, sp = 800, 1000
+print(sp - cp)
+
+# 21. Loss
+cp, sp = 1000, 800
+print(cp - sp)
+
+# 22. Profit Percentage
+cp, sp = 800, 1000
+print((sp - cp) / cp * 100)
+
+# 23. Loss Percentage
+cp, sp = 1000, 800
+print((cp - sp) / cp * 100)
+
+# 24. Discount Amount
+price, discount = 2000, 15
+print(price * discount / 100)
+
+# 25. Price After Discount
+price, discount = 2000, 15
+print(price - price * discount / 100)
+
+# 26. Percentage
+obtained, total = 450, 500
+print(obtained / total * 100)
+
+# 27. Find 20% of a Number
+n = 500
+print(n * 20 / 100)
+
+# 28. Increase by Percentage
+price, increase = 1000, 10
+print(price + price * increase / 100)
+
+# 29. Decrease by Percentage
+price, decrease = 1000, 10
+print(price - price * decrease / 100)
+
+# 30. Ratio of Two Numbers
+a, b = 20, 30
+print(a / b)
+
+# 31. Sum of First N Natural Numbers
+n = 10
+print(n * (n + 1) / 2)
+
+# 32. Sum of First N Even Numbers
+n = 10
+print(n * (n + 1))
+
+# 33. Sum of First N Odd Numbers
+n = 10
+print(n ** 2)
+
+# 34. Absolute Value
+n = -25
+print(abs(n))
+
+# 35. Reciprocal
+n = 4
+print(1 / n)
+
+# 36. Area of Rectangle
+l, w = 10, 5
+print(l * w)
+
+# 37. Perimeter of Rectangle
+l, w = 10, 5
+print(2 * (l + w))
+
+# 38. Area of Square
+s = 6
+print(s ** 2)
+
+# 39. Perimeter of Square
+s = 6
+print(4 * s)
+
+# 40. Area of Triangle
+b, h = 10, 8
+print(0.5 * b * h)
+
+# 41. Area of Circle
+r = 7
+print(3.14159 * r ** 2)
+
+# 42. Circumference of Circle
+r = 7
+print(2 * 3.14159 * r)
+
+# 43. Diameter of Circle
+r = 7
+print(2 * r)
+
+# 44. Radius from Diameter
+d = 14
+print(d / 2)
+
+# 45. Area of Parallelogram
+b, h = 12, 5
+print(b * h)
+
+# 46. Area of Trapezium
+a, b, h = 8, 12, 5
+print(0.5 * (a + b) * h)
+
+# 47. Perimeter of Triangle
+a, b, c = 3, 4, 5
+print(a + b + c)
+
+# 48. Equilateral Triangle Area
+s = 6
+print((3 ** 0.5 / 4) * s ** 2)
+
+# 49. Rhombus Area
+d1, d2 = 10, 8
+print(d1 * d2 / 2)
+
+# 50. Sector Area (90 Degrees)
+r = 7
+print(3.14159 * r ** 2 / 4)
+
+# 51. Speed
+distance, time = 150, 3
+print(distance / time)
+
+# 52. Distance
+speed, time = 60, 2
+print(speed * time)
+
+# 53. Time
+distance, speed = 180, 60
+print(distance / speed)
+
+# 54. Convert KM to Metres
+km = 5
+print(km * 1000)
+
+# 55. Convert Metres to KM
+metres = 2500
+print(metres / 1000)
+
+# 56. Convert Hours to Minutes
+hours = 3
+print(hours * 60)
+
+# 57. Convert Minutes to Seconds
+minutes = 5
+print(minutes * 60)
+
+# 58. Convert KM/H to M/S
+speed = 72
+print(speed * 5 / 18)
+
+# 59. Convert M/S to KM/H
+speed = 20
+print(speed * 18 / 5)
+
+# 60. Average Speed for Equal Distances
+s1, s2 = 40, 60
+print(2 * s1 * s2 / (s1 + s2))
+
+# 61. Celsius to Fahrenheit
+c = 25
+print(c * 9 / 5 + 32)
+
+# 62. Fahrenheit to Celsius
+f = 98.6
+print((f - 32) * 5 / 9)
+
+# 63. Celsius to Kelvin
+c = 25
+print(c + 273.15)
+
+# 64. Kelvin to Celsius
+k = 300
+print(k - 273.15)
+
+# 65. Kilograms to Grams
+kg = 5
+print(kg * 1000)
+
+# 66. Grams to Kilograms
+g = 2500
+print(g / 1000)
+
+# 67. Pounds to Kilograms
+pounds = 100
+print(pounds * 0.453592)
+
+# 68. Inches to Centimetres
+inches = 10
+print(inches * 2.54)
+
+# 69. Feet to Metres
+feet = 10
+print(feet * 0.3048)
+
+# 70. Litres to Millilitres
+litres = 2.5
+print(litres * 1000)
+
+# 71. Linear Equation: ax + b = 0
+a, b = 2, 6
+print(-b / a)
+
+# 72. Quadratic Equation: Discriminant
+a, b, c = 1, 5, 6
+print(b ** 2 - 4 * a * c)
+
+# 73. First Algebraic Identity: (a + b)^2
+a, b = 3, 4
+print((a + b) ** 2)
+
+# 74. Second Algebraic Identity: (a - b)^2
+a, b = 8, 3
+print((a - b) ** 2)
+
+# 75. Difference of Squares: a² - b²
+a, b = 7, 4
+print(a ** 2 - b ** 2)
+
+# 76. Cube Identity: (a + b)^3
+a, b = 2, 3
+print((a + b) ** 3)
+
+# 77. Product of Two Numbers Squared
+a, b = 3, 5
+print((a * b) ** 2)
+
+# 78. Arithmetic Progression: nth Term
+a, d, n = 2, 3, 10
+print(a + (n - 1) * d)
+
+# 79. Arithmetic Progression: Sum
+a, d, n = 2, 3, 10
+print(n / 2 * (2 * a + (n - 1) * d))
+
+# 80. Geometric Progression: nth Term
+a, r, n = 2, 3, 4
+print(a * r ** (n - 1))
+
+# 81. Cube Volume
+s = 5
+print(s ** 3)
+
+# 82. Cube Surface Area
+s = 5
+print(6 * s ** 2)
+
+# 83. Cuboid Volume
+l, w, h = 5, 4, 3
+print(l * w * h)
+
+# 84. Cuboid Total Surface Area
+l, w, h = 5, 4, 3
+print(2 * (l*w + w*h + h*l))
+
+# 85. Cylinder Volume
+r, h = 7, 10
+print(3.14159 * r ** 2 * h)
+
+# 86. Cylinder Curved Surface Area
+r, h = 7, 10
+print(2 * 3.14159 * r * h)
+
+# 87. Sphere Volume
+r = 7
+print(4 / 3 * 3.14159 * r ** 3)
+
+# 88. Sphere Surface Area
+r = 7
+print(4 * 3.14159 * r ** 2)
+
+# 89. Cone Volume
+r, h = 7, 12
+print(3.14159 * r ** 2 * h / 3)
+
+# 90. Pythagorean Theorem
+a, b = 3, 4
+print((a ** 2 + b ** 2) ** 0.5)
+
+# 91. BMI (Body Mass Index)
+weight, height = 70, 1.75
+print(weight / height ** 2)
+
+# 92. Electricity Bill
+units, rate = 150, 7
+print(units * rate)
+
+# 93. Fuel Cost
+litres, price = 20, 105
+print(litres * price)
+
+# 94. Monthly Salary from Annual Salary
+annual_salary = 600000
+print(annual_salary / 12)
+
+# 95. Weekly Salary from Monthly Salary
+monthly_salary = 30000
+print(monthly_salary * 12 / 52)
+
+# 96. Age in Months
+years = 20
+print(years * 12)
+
+# 97. Age in Days (Approximate)
+years = 20
+print(years * 365)
+
+# 98. Work Done
+force, distance = 50, 10
+print(force * distance)
+
+# 99. Density
+mass, volume = 100, 20
+print(mass / volume)
+
+# 100. Pressure
+force, area = 200, 10
+print(force / area)
+
 
