@@ -1,4 +1,4 @@
-👉 Find the Student with Highest Marks
+(1) Find the Student with Highest Marks
 Question: Create a dictionary containing student names and their marks. Find the student who scored the highest marks.
 students = {    "Aman": 85,    "Rahul": 92,    "Priya": 89,    "Karan": 78,    "Neha": 95}topper = max(students, key=students.get)print("Topper:", topper)print("Marks:", students[topper])
 
@@ -7,7 +7,7 @@ Topper: Neha
 Marks: 95
 ==================================================
 
-👉 Calculate Total and Average Marks
+(2) Calculate Total and Average Marks
 Question: Store marks of five subjects in a dictionary and calculate total and average marks.
 marks = {    "English": 85,    "Math": 90,    "Science": 88,    "Computer": 95,    "Hindi": 80}total = sum(marks.values())average = total / len(marks)print("Total Marks:", total)print("Average Marks:", average)
 
@@ -16,7 +16,7 @@ Total Marks: 438
 Average Marks: 87.6
 ==================================================
 
-👉 Count Frequency of Characters
+(3) Count Frequency of Characters
 Question: Count how many times each character appears in a given string using a dictionary.
 text = "programming"frequency = {}for char in text:    frequency[char] = frequency.get(char, 0) + 1print(frequency)
 
@@ -25,7 +25,7 @@ Output:
  'a': 1, 'm': 2, 'i': 1, 'n': 1}
 =================================================
 
-👉  Merge Two Dictionaries
+(4)  Merge Two Dictionaries
 Question: Merge two dictionaries. If a key exists in both dictionaries, add their values.
 dict1 = {"Apple": 10, "Banana": 20, "Mango": 15}dict2 = {"Apple": 5, "Orange": 12, "Mango": 10}result = dict1.copy()for key, value in dict2.items():    result[key] = result.get(key, 0) + valueprint(result)
 
@@ -34,7 +34,7 @@ Output:
  'Mango': 25, 'Orange': 12}
 =================================================
 
-👉  Separate Even and Odd Numbers
+(5)  Separate Even and Odd Numbers
 Question: Store numbers in a dictionary according to whether they are even or odd.
 numbers = [10, 15, 20, 25, 30, 35, 40]result = {    "Even": [],    "Odd": []}for num in numbers:    if num % 2 == 0:        result["Even"].append(num)    else:        result["Odd"].append(num)print(result)
 
@@ -43,7 +43,7 @@ Output:
  'Odd': [15, 25, 35]}
 =================================================
 
-👉  Employee Salary Increment
+(6)  Employee Salary Increment
 Question: Increase every employee's salary by 10% and display the updated salaries.
 employees = {    "Aman": 25000,    "Rahul": 30000,    "Priya": 40000,    "Neha": 35000}for name, salary in employees.items():    employees[name] = salary + (salary * 10 / 100)print(employees)
 
@@ -56,7 +56,7 @@ Output:
 }
 =================================================
 
-👉 Find Students Who Passed
+(7) Find Students Who Passed
 Question: Display students who scored at least 40 marks.
 students = {    "Aman": 75,    "Rahul": 32,    "Priya": 89,    "Karan": 25,    "Neha": 65}for name, marks in students.items():    if marks >= 40:        print(name, "Passed")    else:        print(name, "Failed")
 
@@ -68,7 +68,7 @@ Karan Failed
 Neha Passed
 =================================================
 
-👉 Remove Duplicate Values
+(8) Remove Duplicate Values
 Question: Create a new dictionary containing only unique values from the original dictionary.
 data = {    "a": 10,    "b": 20,    "c": 10,    "d": 30,    "e": 20}result = {}for key, value in data.items():    if value not in result.values():        result[key] = valueprint(result)
 
@@ -76,7 +76,7 @@ Output:
 {'a': 10, 'b': 20, 'd': 30}
 =================================================
 
-👉 Sort Dictionary by Values
+(9) Sort Dictionary by Values
 Question: Sort products according to their prices in ascending order.
 products = {    "Laptop": 55000,    "Mouse": 500,    "Keyboard": 1500,    "Monitor": 12000}sorted_products = dict(    sorted(products.items(), key=lambda item: item[1]))print(sorted_products)
 
@@ -89,7 +89,7 @@ Output:
 }
 ==================================================
 
-👉 Find Common Keys
+(10) Find Common Keys
 Question: Find common keys between two dictionaries.
 dict1 = {    "name": "Aman",    "age": 22,    "city": "Delhi",    "salary": 30000}dict2 = {    "name": "Rahul",    "age": 25,    "country": "India",    "salary": 40000}common = {}for key in dict1:    if key in dict2:        common[key] = [dict1[key], dict2[key]]print(common)
 
@@ -101,7 +101,7 @@ Output:
 }
 ==================================================
 
-👉 Student Database
+(11) Student Database
 Question: Create a student database containing student ID, name, age and marks. Display each student's total marks.
 students = {    101: {        "name": "Aman",        "age": 21,        "marks": [80, 85, 90]    },    102: {        "name": "Rahul",        "age": 22,        "marks": [75, 80, 85]    },    103: {        "name": "Priya",        "age": 20,        "marks": [90, 95, 92]    }}for student_id, details in students.items():    total = sum(details["marks"])    print(details["name"], ":", total)
 
@@ -111,7 +111,7 @@ Rahul : 240
 Priya : 277
 ==================================================
 
-👉 Employee Department Report
+(12) Employee Department Report
 Question: Store employee information inside a nested dictionary and display employees earning more than 30,000.
 employees = {    1: {"name": "Aman", "department": "IT", "salary": 45000},    2: {"name": "Rahul", "department": "HR", "salary": 28000},    3: {"name": "Priya", "department": "IT", "salary": 55000},    4: {"name": "Neha", "department": "Sales", "salary": 35000}}for emp_id, details in employees.items():    if details["salary"] > 30000:        print(details["name"], details["salary"])
 
@@ -121,7 +121,7 @@ Priya 55000
 Neha 35000
 =================================================
 
-👉 Calculate Shopping Cart Bill
+(13) Calculate Shopping Cart Bill
 Question: Calculate the total shopping bill using product prices and quantities stored in a dictionary.
 cart = {    "Laptop": {"price": 50000, "quantity": 1},    "Mouse": {"price": 500, "quantity": 2},    "Keyboard": {"price": 1500, "quantity": 1}}total = 0for product, details in cart.items():    amount = details["price"] * details["quantity"]    total += amount    print(product, ":", amount)print("Total Bill:", total)
 
@@ -132,7 +132,7 @@ Keyboard : 1500
 Total Bill: 52500
 ================================================
 
-👉 Find Department-wise Total Salary
+(14) Find Department-wise Total Salary
 Question: Calculate the total salary expenditure of each department.
 employees = {    "Aman": {"department": "IT", "salary": 40000},    "Rahul": {"department": "HR", "salary": 30000},    "Priya": {"department": "IT", "salary": 50000},    "Neha": {"department": "HR", "salary": 35000},    "Karan": {"department": "Sales", "salary": 25000}}result = {}for name, details in employees.items():    dept = details["department"]    salary = details["salary"]    result[dept] = result.get(dept, 0) + salaryprint(result)
 
@@ -140,7 +140,7 @@ Output:
 {'IT': 90000, 'HR': 65000, 'Sales': 25000}
 ================================================
 
-👉 Update Nested Dictionary
+(15) Update Nested Dictionary
 Question: Update the salary of an employee and add a new employee to the database.
 employees = {    101: {"name": "Aman", "salary": 30000},    102: {"name": "Rahul", "salary": 35000}}employees[101]["salary"] = 40000employees[103] = {    "name": "Priya",    "salary": 45000}for emp_id, details in employees.items():    print(emp_id, details)
 
@@ -150,7 +150,7 @@ Output:
 103 {'name': 'Priya', 'salary': 45000}
 ===============================================
 
-👉 Inventory Management System
+(16) Inventory Management System
 Question: Create an inventory system that checks stock, calculates the total inventory value and displays products with low stock.
 inventory = {    "Laptop": {"price": 50000, "stock": 5},    "Mouse": {"price": 500, "stock": 3},    "Monitor": {"price": 12000, "stock": 8},    "Keyboard": {"price": 1500, "stock": 2}}total_value = 0for product, details in inventory.items():    value = details["price"] * details["stock"]    total_value += value    if details["stock"] < 4:        print(product, "Low Stock")print("Inventory Value:", total_value)
 
@@ -160,7 +160,7 @@ Keyboard Low Stock
 Inventory Value: 360000
 ==============================================
 
-👉 Word Frequency Counter
+(17) Word Frequency Counter
 Question: Count the frequency of each word in a sentence, ignoring uppercase and lowercase differences.
 sentence = "Python is easy and Python is powerful"words = sentence.lower().split()frequency = {}for word in words:    frequency[word] = frequency.get(word, 0) + 1print(frequency)
 
@@ -174,7 +174,7 @@ Output:
 }
 ===============================================
 
-👉 ATM Account Management
+(18) ATM Account Management
 Question: Create a simple ATM system that allows a user to deposit money, withdraw money and check their balance.
 account = {    "name": "Aman",    "balance": 10000}deposit = 5000withdraw = 3000account["balance"] += depositif withdraw <= account["balance"]:    account["balance"] -= withdrawelse:    print("Insufficient Balance")print("Account Holder:", account["name"])print("Final Balance:", account["balance"])
 
@@ -183,7 +183,7 @@ Account Holder: Aman
 Final Balance: 12000
 ===============================================
 
-👉 Product Discount Calculator
+(19) Product Discount Calculator
 Question: Apply a 15% discount to products whose price is above 1000.
 products = {    "Laptop": 50000,    "Mouse": 500,    "Keyboard": 1500,    "Monitor": 12000}for product, price in products.items():    if price > 1000:        products[product] = price * 0.85print(products)
 
@@ -196,7 +196,7 @@ Output:
 }
 ===============================================
 
-👉 Voting System
+(20) Voting System
 Question: Create a voting system that counts votes for different candidates and finds the winner.
 votes = [    "Aman", "Rahul", "Aman",    "Priya", "Rahul", "Aman",    "Priya", "Aman", "Rahul"]vote_count = {}for candidate in votes:    vote_count[candidate] = vote_count.get(candidate, 0) + 1winner = max(vote_count, key=vote_count.get)print("Vote Count:", vote_count)print("Winner:", winner)print("Total Votes:", len(votes))
 
@@ -206,7 +206,7 @@ Winner: Aman
 Total Votes: 9
 ===============================================
 
-👉 Create Dictionary Using User Input
+(21) Create Dictionary Using User Input
 Question: Ask the user to enter student names and marks. Store the data in a dictionary and calculate the average marks.
 students = {}n = int(input("Enter number of students: "))for i in range(n):    name = input("Enter name: ")    marks = int(input("Enter marks: "))    students[name] = markstotal = sum(students.values())average = total / len(students)print("Student Records:", students)print("Average Marks:", average)
 
@@ -224,7 +224,7 @@ Student Records: {'Aman': 80, 'Rahul': 90, 'Priya': 70}
 Average Marks: 80.0
 ================================================
 
-👉 Dictionary-Based Login System
+(22) Dictionary-Based Login System
 Question: Create a login system that checks whether the entered username and password match stored credentials.
 users = {    "aman": "1234",    "rahul": "5678",    "priya": "abcd"}username = input("Enter username: ")password = input("Enter password: ")if username in users and users[username] == password:    print("Login Successful")else:    print("Invalid Username or Password")
 
@@ -236,7 +236,7 @@ Output:
 Login Successful
 ================================================
 
-👉 Find Second Highest Salary
+(23) Find Second Highest Salary
 Question: Find the employee who has the second-highest distinct salary.
 employees = {    "Aman": 50000,    "Rahul": 35000,    "Priya": 70000,    "Neha": 60000,    "Karan": 70000}unique_salaries = sorted(    set(employees.values()),    reverse=True)second_highest = unique_salaries[1]for name, salary in employees.items():    if salary == second_highest:        print(name, salary)
 
@@ -244,7 +244,7 @@ Output:
 Neha 60000
 ================================================
 
-👉 Group Students by Grade
+(24) Group Students by Grade
 Question: Group students according to their grades based on marks.
 students = {    "Aman": 95,    "Rahul": 82,    "Priya": 91,    "Neha": 75,    "Karan": 65,    "Riya": 88}grades = {    "A": [],    "B": [],    "C": []}for name, marks in students.items():    if marks >= 90:        grades["A"].append(name)    elif marks >= 75:        grades["B"].append(name)    else:        grades["C"].append(name)print(grades)
 
@@ -256,7 +256,7 @@ Output:
 }
 =================================================
 
-👉 Bank Transaction History
+(25) Bank Transaction History
 Question: Create a bank account that stores transaction history and calculates the final balance after deposits and withdrawals.
 account = {    "name": "Aman",    "balance": 10000,    "transactions": []}transactions = [    ("Deposit", 5000),    ("Withdraw", 2000),    ("Deposit", 3000),    ("Withdraw", 1000)]for transaction, amount in transactions:    if transaction == "Deposit":        account["balance"] += amount    elif transaction == "Withdraw":        if amount <= account["balance"]:            account["balance"] -= amount        else:            print("Insufficient Balance")    account["transactions"].append({        "type": transaction,        "amount": amount    })print("Account:", account["name"])print("Final Balance:", account["balance"])print("Transaction History:")for item in account["transactions"]:    print(item["type"], item["amount"])
 
@@ -269,3 +269,332 @@ Deposit 5000
 Withdraw 2000
 Deposit 3000
 Withdraw 1000
+===============================================
+
+(26) Find the Top 3 Highest Scoring Students
+Question: Create a dictionary of students and their marks. Find the top three students according to their marks.
+students = {    "Aman": 85,    "Rahul": 92,    "Priya": 98,    "Neha": 89,    "Karan": 95,    "Riya": 78}sorted_students = sorted(    students.items(),    key=lambda x: x[1],    reverse=True)for name, marks in sorted_students[:3]:    print(name, marks)
+
+Output:
+Priya 98
+Karan 95
+Rahul 92
+==============================================
+
+(27) Find Keys Having Maximum and Minimum Values
+Question: Find the keys containing the highest and lowest values in a dictionary.
+data = {    "A": 450,    "B": 120,    "C": 890,    "D": 250,    "E": 50}maximum = max(data, key=data.get)minimum = min(data, key=data.get)print("Maximum:", maximum, data[maximum])print("Minimum:", minimum, data[minimum])
+
+Output:
+Maximum: C 890
+Minimum: E 50
+==============================================
+
+(28) Invert Dictionary with Duplicate Values
+Question: Reverse the keys and values of a dictionary. If multiple keys have the same value, store all corresponding keys in a list.
+data = {    "Aman": "IT",    "Rahul": "HR",    "Priya": "IT",    "Neha": "Sales",    "Karan": "HR"}result = {}for name, department in data.items():    if department not in result:        result[department] = []    result[department].append(name)print(result)
+
+Output:
+{
+ 'IT': ['Aman', 'Priya'],
+ 'HR': ['Rahul', 'Karan'],
+ 'Sales': ['Neha']
+}
+=============================================
+
+(29) Find Missing Keys Between Dictionaries
+Question: Compare two dictionaries and find keys that exist in the first dictionary but not in the second.
+dict1 = {    "name": "Aman",    "age": 22,    "city": "Delhi",    "salary": 40000,    "department": "IT"}dict2 = {    "name": "Rahul",    "age": 25,    "city": "Mumbai"}missing = {}for key, value in dict1.items():    if key not in dict2:        missing[key] = valueprint(missing)
+
+Output:
+{
+ 'salary': 40000,
+ 'department': 'IT'
+}
+============================================
+
+(30) Calculate Percentage Contribution
+Question: Calculate the percentage contribution of each product to the total sales.
+sales = {    "Laptop": 50000,    "Mobile": 30000,    "Tablet": 20000,    "Headphone": 10000}total = sum(sales.values())for product, amount in sales.items():    percentage = (amount / total) * 100    print(product, round(percentage, 2), "%")
+
+Output:
+Laptop 45.45 %
+Mobile 27.27 %
+Tablet 18.18 %
+Headphone 9.09 %
+============================================
+
+(31) Calculate Subject-wise Highest Scorer
+Question: Store multiple students and their subject marks. Find the highest scorer in each subject.
+students = {    "Aman": {"Math": 85, "English": 90, "Science": 80},    "Rahul": {"Math": 95, "English": 75, "Science": 88},    "Priya": {"Math": 90, "English": 98, "Science": 95},    "Neha": {"Math": 80, "English": 85, "Science": 92}}subjects = students["Aman"].keys()for subject in subjects:    topper = max(        students,        key=lambda name: students[name][subject]    )    print(subject, ":", topper,          students[topper][subject])
+
+Output:
+Math : Rahul 95
+English : Priya 98
+Science : Priya 95
+============================================
+
+(32) Calculate Employee Bonus Based on Performance
+Question: Calculate employee bonuses according to their performance ratings.
+
+Rules:
+- Rating 5: 20% bonus
+- Rating 4: 15% bonus
+- Rating 3: 10% bonus
+- Rating below 3: No bonus
+employees = {    "Aman": {"salary": 40000, "rating": 5},    "Rahul": {"salary": 35000, "rating": 3},    "Priya": {"salary": 50000, "rating": 4},    "Neha": {"salary": 30000, "rating": 2}}for name, details in employees.items():    salary = details["salary"]    rating = details["rating"]    if rating == 5:        bonus = salary * 0.20    elif rating == 4:        bonus = salary * 0.15    elif rating == 3:        bonus = salary * 0.10    else:        bonus = 0    details["bonus"] = bonus    details["final_salary"] = salary + bonus    print(name, details)
+
+Output:
+Aman {'salary': 40000, 'rating': 5,
+      'bonus': 8000.0, 'final_salary': 48000.0}
+
+Rahul {'salary': 35000, 'rating': 3,
+       'bonus': 3500.0, 'final_salary': 38500.0}
+
+Priya {'salary': 50000, 'rating': 4,
+       'bonus': 7500.0, 'final_salary': 57500.0}
+
+Neha {'salary': 30000, 'rating': 2,
+      'bonus': 0, 'final_salary': 30000}
+===================================================
+
+(33) Find Students Who Failed in Multiple Subjects
+Question: Find students who failed in at least two subjects. Passing marks are 40.
+students = {    "Aman": {"Math": 35, "English": 30, "Science": 75},    "Rahul": {"Math": 80, "English": 65, "Science": 55},    "Priya": {"Math": 25, "English": 35, "Science": 30},    "Neha": {"Math": 45, "English": 30, "Science": 80}}for name, subjects in students.items():    failed = []    for subject, marks in subjects.items():        if marks < 40:            failed.append(subject)    if len(failed) >= 2:        print(name, "Failed Subjects:", failed)
+
+Output:
+Aman Failed Subjects: ['Math', 'English']
+Priya Failed Subjects: ['Math', 'English', 'Science']
+===================================================
+
+(34) Department-wise Employee Ranking
+Question: Group employees by department and rank their salaries from highest to lowest within each department.
+employees = {    "Aman": {"department": "IT", "salary": 50000},    "Rahul": {"department": "HR", "salary": 35000},    "Priya": {"department": "IT", "salary": 65000},    "Neha": {"department": "HR", "salary": 45000},    "Karan": {"department": "IT", "salary": 40000}}departments = {}for name, details in employees.items():    dept = details["department"]    departments.setdefault(dept, []).append(        (name, details["salary"])    )for dept, members in departments.items():    ranked = sorted(        members,        key=lambda x: x[1],        reverse=True    )    print("\n", dept)    for rank, (name, salary) in enumerate(ranked, 1):        print(rank, name, salary)
+
+Output:
+IT
+1 Priya 65000
+2 Aman 50000
+3 Karan 40000
+
+HR
+1 Neha 45000
+2 Rahul 35000
+==================================================
+
+(35) Find Products Available in Every Store
+Question: Three stores maintain their own product dictionaries. Find products that are available in all stores.
+stores = {    "Store1": {"Laptop": 5, "Mouse": 10, "Keyboard": 4},    "Store2": {"Laptop": 3, "Mouse": 8, "Monitor": 6},    "Store3": {"Laptop": 7, "Mouse": 5, "Keyboard": 2}}common_products = set.intersection(    *(set(products.keys()) for products in stores.values()))print("Common Products:", common_products)
+
+Output:
+Common Products: {'Laptop', 'Mouse'}
+=================================================
+
+(36) Merge Multiple Dictionaries and Calculate Totals
+Question: Three branches have separate sales records. Merge all records and calculate total sales for each product.
+branch1 = {"Laptop": 10, "Mobile": 20}branch2 = {"Laptop": 15, "Tablet": 10}branch3 = {"Mobile": 25, "Tablet": 15}branches = [branch1, branch2, branch3]result = {}for branch in branches:    for product, quantity in branch.items():        result[product] = result.get(product, 0) + quantityprint(result)
+
+Output:
+{'Laptop': 25, 'Mobile': 45, 'Tablet': 25}
+================================================
+
+(37) Find Consecutive Duplicate Values
+Question: Find values that appear more than once consecutively in a dictionary's insertion order.
+data = {    "a": 10,    "b": 10,    "c": 20,    "d": 30,    "e": 30,    "f": 30,    "g": 40}items = list(data.items())result = {}for i in range(len(items) - 1):    key, value = items[i]    next_key, next_value = items[i + 1]    if value == next_value:        result[key] = value        result[next_key] = next_valueprint(result)
+
+Output:
+{'a': 10, 'b': 10, 'd': 30, 'e': 30, 'f': 30}
+================================================
+
+(38) Find Students with Increasing Marks
+Question: Find students whose marks are strictly increasing across three consecutive tests.
+students = {    "Aman": [45, 60, 75],    "Rahul": [80, 70, 90],    "Priya": [50, 65, 85],    "Neha": [40, 55, 50]}for name, marks in students.items():    if marks[0] < marks[1] < marks[2]:        print(name, "Improving")
+
+Output:
+Aman Improving
+Priya Improving
+==============================================
+
+(39) Calculate Monthly Sales Growth
+Question: Calculate the percentage growth or decline in sales between consecutive months.
+sales = {    "January": 50000,    "February": 60000,    "March": 45000,    "April": 75000,    "May": 90000}months = list(sales.keys())for i in range(1, len(months)):    previous = sales[months[i - 1]]    current = sales[months[i]]    growth = ((current - previous) / previous) * 100    print(        months[i - 1], "to", months[i],        ":", round(growth, 2), "%"    )
+
+Output:
+January to February : 20.0 %
+February to March : -25.0 %
+March to April : 66.67 %
+April to May : 20.0 %
+============================================
+
+(40) Find Most Frequently Purchased Product
+Question: Given multiple customer shopping records, find the product purchased most frequently.
+customers = {    "Aman": ["Laptop", "Mouse", "Keyboard"],    "Rahul": ["Mouse", "Laptop"],    "Priya": ["Mouse", "Tablet", "Laptop"],    "Neha": ["Keyboard", "Mouse"]}frequency = {}for products in customers.values():    for product in products:        frequency[product] = frequency.get(product, 0) + 1top_product = max(frequency, key=frequency.get)print("Product Frequency:", frequency)print("Most Purchased:", top_product)print("Times Purchased:", frequency[top_product])
+
+Output:
+Product Frequency: {
+ 'Laptop': 3,
+ 'Mouse': 4,
+ 'Keyboard': 2,
+ 'Tablet': 1
+}
+
+Most Purchased: Mouse
+Times Purchased: 4
+==========================================
+
+(41) Restaurant Billing with GST and Discount
+Question: Create a restaurant billing system that calculates item totals, applies a 10% discount when the subtotal exceeds ₹2,000, and then adds 5% GST to the discounted amount.
+order = {    "Pizza": {"price": 500, "qty": 2},    "Burger": {"price": 200, "qty": 3},    "Pasta": {"price": 350, "qty": 2},    "Cold Drink": {"price": 100, "qty": 2}}subtotal = 0for item, details in order.items():    amount = details["price"] * details["qty"]    subtotal += amount    print(item, amount)discount = 0if subtotal > 2000:    discount = subtotal * 0.10taxable_amount = subtotal - discountgst = taxable_amount * 0.05final_bill = taxable_amount + gstprint("Subtotal:", subtotal)print("Discount:", discount)print("GST:", gst)print("Final Bill:", final_bill)
+
+Output:
+Pizza 1000
+Burger 600
+Pasta 700
+Cold Drink 200
+Subtotal: 2500
+Discount: 250.0
+GST: 112.5
+Final Bill: 2362.5
+========================================
+
+(42) Library Management with Book Issuing
+Question: Create a library system that stores book information and allows issuing and returning books while maintaining available copies.
+library = {    "Python": {"total": 5, "available": 5},    "Java": {"total": 3, "available": 3},    "C++": {"total": 4, "available": 4}}transactions = [    ("issue", "Python"),    ("issue", "Python"),    ("issue", "Java"),    ("return", "Python"),    ("issue", "C++")]for action, book in transactions:    if book not in library:        print("Book Not Found")        continue    if action == "issue":        if library[book]["available"] > 0:            library[book]["available"] -= 1            print(book, "Issued")        else:            print(book, "Not Available")    elif action == "return":        if library[book]["available"] < library[book]["total"]:            library[book]["available"] += 1            print(book, "Returned")        else:            print("Invalid Return")
+
+Output:
+Python Issued
+Python Issued
+Java Issued
+Python Returned
+C++ Issued
+
+Final Library: {
+ 'Python': {'total': 5, 'available': 4},
+ 'Java': {'total': 3, 'available': 2},
+ 'C++': {'total': 4, 'available': 3}
+}
+========================================
+
+(43) Bank Account with Multiple Customers
+Question: Create a banking system that processes deposits and withdrawals for multiple customers and displays their final balances.
+accounts = {    101: {"name": "Aman", "balance": 10000},    102: {"name": "Rahul", "balance": 15000},    103: {"name": "Priya", "balance": 20000}}transactions = [    (101, "deposit", 5000),    (102, "withdraw", 3000),    (103, "deposit", 4000),    (101, "withdraw", 2000),    (102, "withdraw", 20000)]for acc_id, action, amount in transactions:    if acc_id not in accounts:        print("Account Not Found")        continue    if action == "deposit":        accounts[acc_id]["balance"] += amount    elif action == "withdraw":        if amount <= accounts[acc_id]["balance"]:            accounts[acc_id]["balance"] -= amount        else:            print(accounts[acc_id]["name"], "Insufficient Balance")for acc_id, details in accounts.items():    print(details["name"], details["balance"])
+
+Output:
+Rahul Insufficient Balance
+Aman 13000
+Rahul 12000
+Priya 24000
+========================================
+
+(44) Cricket Scorecard Analyzer
+Question: Store players' runs and balls faced. Calculate strike rate and identify the highest scorer.
+players = {    "Aman": {"runs": 45, "balls": 30},    "Rahul": {"runs": 70, "balls": 40},    "Priya": {"runs": 35, "balls": 20},    "Neha": {"runs": 20, "balls": 15}}total_runs = 0for name, details in players.items():    runs = details["runs"]    balls = details["balls"]    strike_rate = (runs / balls) * 100    total_runs += runs    print(name, "Strike Rate:", round(strike_rate, 2))topper = max(    players,    key=lambda name: players[name]["runs"])print("Highest Scorer:", topper)print("Total Runs:", total_runs)
+
+Output:
+Aman Strike Rate: 150.0
+Rahul Strike Rate: 175.0
+Priya Strike Rate: 175.0
+Neha Strike Rate: 133.33
+Highest Scorer: Rahul
+Total Runs: 170
+=======================================
+
+(45) Hotel Room Booking System
+Question: Create a hotel booking system that checks room availability and calculates the total booking price.
+rooms = {    101: {"type": "Single", "price": 1500, "available": True},    102: {"type": "Double", "price": 2500, "available": True},    103: {"type": "Deluxe", "price": 4000, "available": False},    104: {"type": "Deluxe", "price": 4000, "available": True}}bookings = [    (101, 3),    (103, 2),    (104, 4)]total_revenue = 0for room_id, days in bookings:    if room_id not in rooms:        print("Invalid Room")        continue    room = rooms[room_id]    if room["available"]:        bill = room["price"] * days        room["available"] = False        total_revenue += bill        print("Room:", room_id)        print("Days:", days)        print("Bill:", bill)    else:        print("Room", room_id, "Not Available")
+
+Output:
+Room: 101
+Days: 3
+Bill: 4500
+Room 103 Not Available
+Room: 104
+Days: 4
+Bill: 16000
+Total Revenue: 20500
+=====================================
+
+(46) Dynamic Dictionary with Duplicate Name Handling
+Question: Take employee names and salaries from the user. If the same employee name is entered again, update their existing salary.
+employees = {}n = int(input("Enter number of employees: "))for i in range(n):    name = input("Enter employee name: ")    salary = float(input("Enter salary: "))    employees[name] = salaryprint("\nEmployee Records:")for name, salary in employees.items():    print(name, salary)
+
+Sample Input:
+Enter number of employees: 4
+Enter employee name: Aman
+Enter salary: 30000
+Enter employee name: Rahul
+Enter salary: 35000
+Enter employee name: Aman
+Enter salary: 40000
+Enter employee name: Priya
+Enter salary: 45000
+
+Output:
+Employee Records:
+Aman 40000.0
+Rahul 35000.0
+Priya 45000.0
+======================================
+
+(47) Create a Word Length Dictionary
+Question: Take a sentence and group all words according to their length.
+sentence = "Python makes programming interesting and powerful"words = sentence.split()result = {}for word in words:    length = len(word)    if length not in result:        result[length] = []    result[length].append(word)print(result)
+
+Output:
+{
+ 3: ['and'],
+ 4: ['makes'],
+ 6: ['Python'],
+ 11: ['programming', 'interesting'],
+ 9: ['powerful']
+}
+========================================
+
+(48) Compare Two Student Performance Records
+Question: Compare two examination records and calculate the improvement or decline in each subject.
+exam1 = {    "Math": 60,    "English": 75,    "Science": 80,    "Computer": 70}exam2 = {    "Math": 85,    "English": 65,    "Science": 90,    "Computer": 70}for subject in exam1:    old_marks = exam1[subject]    new_marks = exam2[subject]    difference = new_marks - old_marks    if difference > 0:        status = "Improved"    elif difference < 0:        status = "Declined"    else:        status = "No Change"    print(subject, difference, status)
+
+Output:
+Math 25 Improved
+English -10 Declined
+Science 10 Improved
+Computer 0 No Change
+=======================================
+
+(49) Find Pair of Products with Same Price
+Question: Group products that have identical prices.
+products = {    "Mouse": 500,    "Keyboard": 1500,    "Headphone": 500,    "Speaker": 2000,    "Webcam": 1500,    "USB": 500}result = {}for product, price in products.items():    result.setdefault(price, []).append(product)for price, names in result.items():    if len(names) > 1:        print(price, names)
+
+Output:
+500 ['Mouse', 'Headphone', 'USB']
+1500 ['Keyboard', 'Webcam']
+======================================
+
+(50) Complete Sales Performance Analyzer
+Question: A company stores monthly sales of multiple employees. Calculate total sales, average sales, highest-performing employee, and employees who achieved sales targets. The target is ₹50,000.
+employees = {    "Aman": {        "January": 45000,        "February": 55000,        "March": 60000    },    "Rahul": {        "January": 30000,        "February": 40000,        "March": 35000    },    "Priya": {        "January": 70000,        "February": 65000,        "March": 80000    },    "Neha": {        "January": 50000,        "February": 52000,        "March": 48000    }}performance = {}for name, monthly_sales in employees.items():    total = sum(monthly_sales.values())    average = total / len(monthly_sales)    achieved = sum(        1 for sale in monthly_sales.values()
+
+Output:
+Employee: Aman
+Total Sales: 160000
+Average Sales: 53333.333333333336
+Target Achieved: 2
+
+Employee: Rahul
+Total Sales: 105000
+Average Sales: 35000.0
+Target Achieved: 0
+
+Employee: Priya
+Total Sales: 215000
+Average Sales: 71666.66666666667
+Target Achieved: 3
+
+Employee: Neha
+Total Sales: 150000
+Average Sales: 50000.0
+Target Achieved: 2
+
+Best Performer: Priya
+Highest Sales: 215000
+=========================================
