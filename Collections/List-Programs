@@ -1,271 +1,368 @@
-👉 Create a List (Easy)
-    fruits = ["Apple", "Banana", "Mango"]
-    print(fruits)
-    Output
-    ['Apple', 'Banana', 'Mango']
+(1) Create a list of 5 numbers and print it.
+numbers = [10, 20, 30, 40, 50]print(numbers)
 
-👉 Access Elements
-    numbers = [10, 20, 30, 40]
-    print(numbers[0])
-    print(numbers[2])
-    Output
-    10
-    30
+Output:
+[10, 20, 30, 40, 50]
+===========================================
 
-👉 Negative Indexing
-    colors = ["Red", "Green", "Blue"]
-    print(colors[-1])
-    print(colors[-2])
-    Output
-    Blue
-    Green
+(2) Print the first and last element of a list.
+numbers = [10, 20, 30, 40, 50]print("First Element:", numbers[0])print("Last Element:", numbers[-1])
 
-👉 Change List Item
-    animals = ["Dog", "Cat", "Lion"]
-    animals[1] = "Tiger"
-    print(animals)
-    Output
-    ['Dog', 'Tiger', 'Lion']
+Output:
+First Element: 10
+Last Element: 50
+==========================================
 
-👉 Add Item
-    students = ["Rahul", "Aman"]
-    students.append("Neha")
-    print(students)
-    Output
-    ['Rahul', 'Aman', 'Neha']
+(3) Find the length of a list.
+numbers = [5, 10, 15, 20, 25, 30]print("Length:", len(numbers))
 
-👉 Insert Item
-    numbers = [10, 20, 40]
-    numbers.insert(2, 30)
-    print(numbers)
-    Output
-    [10, 20, 30, 40]
+Output:
+Length: 6
+=========================================
 
-👉 Remove Item
-    fruits = ["Apple", "Banana", "Orange"]
-    fruits.remove("Banana")
-    print(fruits)
+(4) Add an element at the end of a list.
+numbers = [10, 20, 30, 40]numbers.append(50)print(numbers)
 
-👉 Pop Item
-    numbers = [1, 2, 3, 4]
-    numbers.pop()
-    print(numbers)
-    Output
-    [1, 2, 3]
+Output:
+[10, 20, 30, 40, 50]
+=========================================
 
-👉 Loop Through List
-    fruits = ["Apple", "Banana", "Mango"]
-    for fruit in fruits:
-        print(fruit)
+(6) Insert an element at a specific position.
+numbers = [10, 20, 40, 50]numbers.insert(2, 30)print(numbers)
 
-👉 Find Length
-    languages = ["Python", "Java", "C++", "Go"]
-    print(len(languages))
-    Output
-    4
+Output:
+[10, 20, 30, 40, 50]
+========================================
 
-👉 Sum of List
-    marks = [80, 70, 90, 60]
-    print(sum(marks))
-    Output
-    300
+(7) Remove an element from a list.
+numbers = [10, 20, 30, 40, 50]numbers.remove(30)print(numbers)
 
-👉 Maximum and Minimum
-    numbers = [25, 10, 90, 60]
-    print(max(numbers))
-    print(min(numbers))
+Output:
+[10, 20, 40, 50]
+=======================================
 
-👉 Sorting List
-    numbers = [50, 10, 30, 20]
-    numbers.sort()
-    print(numbers)
-    Output
-    [10, 20, 30, 50]
+(8) Remove the last element using pop().
+numbers = [10, 20, 30, 40, 50]removed = numbers.pop()print("Removed Element:", removed)print("Updated List:", numbers)
 
-👉 Reverse List
-    numbers = [1, 2, 3, 4, 5]
-    numbers.reverse()
-    print(numbers)
+Output:
+Removed Element: 50
+Updated List: [10, 20, 30, 40]
+======================================
 
-👉 Copy List
-    list1 = [10, 20, 30]
-    list2 = list1.copy()
-    print(list2)
+(9) Print all elements using a for loop.
+numbers = [10, 20, 30, 40, 50]for num in numbers:    print(num)
 
-👉 List Slicing
-    numbers = [10, 20, 30, 40, 50]
-    print(numbers[1:4])
-    print(numbers[:3])
-    print(numbers[2:])
+Output:
+10
+20
+30
+40
+50
+====================================
 
-👉 List Concatenation
-    list1 = [1, 2]
-    list2 = [3, 4]
-    result = list1 + list2
-    print(result)
+(10) Find the sum of all list elements.
+numbers = [10, 20, 30, 40, 50]total = sum(numbers)print("Sum:", total)
 
-👉 Nested List (2D List)
-    matrix = [
-        [1, 2],
-        [3, 4]
-    ]
-    print(matrix[0][1])
-    print(matrix[1][0])
-    Output
-    2
-    3
+Output:
+Sum: 150
+====================================
 
-👉 List Comprehension (Intermediate)
-    squares = [x*x for x in range(1, 6)]
-    print(squares)
-    Output
-    [1, 4, 9, 16, 25]
+(11) Find the largest element in a list.
+numbers = [45, 12, 89, 34, 67]print("Largest:", max(numbers))
 
-👉 Even Numbers using List Comprehension
-    even = [x for x in range(1, 21) if x % 2 == 0]
-    print(even)
+Output:
+Largest: 89
+====================================
 
-👉 Find Largest Number Without max()
-    numbers = [25, 90, 12, 67, 45]
-    largest = numbers[0]
-    for num in numbers:
-        if num > largest:
-            largest = num
-    print("Largest =", largest)
+(12) Find the smallest element in a list.
+numbers = [45, 12, 89, 34, 67]print("Smallest:", min(numbers))
 
-👉 Count Even and Odd Numbers
-    numbers = [10, 15, 20, 33, 40]
-    even = 0
-    odd = 0
-    for num in numbers:
-        if num % 2 == 0:
-            even += 1
-        else:
-            odd += 1
-    print("Even =", even)
-    print("Odd =", odd)
+Output:
+Smallest: 12
+====================================
 
-👉 Remove Duplicates
-    numbers = [1, 2, 2, 3, 4, 4, 5]
-    unique = []
-    for num in numbers:
-        if num not in unique:
-            unique.append(num)
-    print(unique)
+(13) Count how many times an element appears.
+numbers = [10, 20, 10, 30, 10, 40, 10]print("10 appears:", numbers.count(10), "times")
 
-👉 Second Largest Number
-    numbers = [45, 90, 10, 75, 60]
-    numbers.sort()
-    print("Second Largest =", numbers[-2])
+Output:
+10 appears: 4 times
+====================================
 
-👉 Student Marks Program (Hard)
-    students = [
-        ["Rahul", 85],
-        ["Aman", 90],
-        ["Neha", 95],
-        ["Priya", 88]
-    ]
-    highest = students[0]
-    for student in students:
-        if student[1] > highest[1]:
-            highest = student
-    print("Topper Name :", highest[0])
-    print("Marks :", highest[1])
+(14) Check whether an element exists in a list.
+numbers = [10, 20, 30, 40, 50]if 30 in numbers:    print("Element Found")else:    print("Element Not Found")
 
-👉 Matrix Addition (Hard)
-    A = [
-        [1, 2],
-        [3, 4]
-    ]
-    B = [
-        [5, 6],
-        [7, 8]
-    ]
-    result = []
-    for i in range(len(A)):
-        row = []
-        for j in range(len(A[0])):
-            row.append(A[i][j] + B[i][j])
-        result.append(row)
-    print(result)
-    Output
-    [[6, 8], [10, 12]]
+Output:
+Element Found
+=====================================
 
-👉 Shopping Cart Project (Mini Project)
-    cart = []
-    while True:
-        print("\n1. Add Item")
-        print("2. Remove Item")
-        print("3. View Cart")
-        print("4. Exit")
-        choice = input("Enter Choice: ")
-    
-        if choice == "1":
-            item = input("Enter Item: ")
-            cart.append(item)
-    
-        elif choice == "2":
-            item = input("Enter Item to Remove: ")
-            if item in cart:
-                cart.remove(item)
-            else:
-                print("Item Not Found!")
-    
-        elif choice == "3":
-            print("Cart:", cart)
-    
-        elif choice == "4":
-            break
-        else:
-            print("Invalid Choice!")
--------------------------------------------------------------------------------
-l = []
-n = int(input("Enter Range of List Elements : "))
-print("Range of Elements : ",n)
-for i in range(n):
-	ele = int(input("Enter Element : "))
-	l.append(ele)
-print("List Of Elements :", l)
+(15) Reverse a list.
+numbers = [10, 20, 30, 40, 50]numbers.reverse()print(numbers)
 
-while True:
-	print("======LIST METHODS======")
-	print("1. Append Item")
-	print("2. Insert Item")
-	print("3. Remove Item")
-	print("4. Sort List")
-	print("5. Copy List")
-	print("6. Exit")
-	choice = int(input("Enter Your Choice : "))
+Output:
+[50, 40, 30, 20, 10]
+=====================================
 
-	if choice == 1:
-		element = int(input("Enter Element to Append in List : "))
-		l.append(element)
-		print("New List : ",l)
+(16) Sort a list in ascending order.
+numbers = [50, 10, 40, 20, 30]numbers.sort()print(numbers)
 
-	elif choice == 2:
-		element = int(input("Enter New Element to Insert in List : "))
-		val = int(input("Enter Position where u want to insert new element : "))
-		l.insert(val,element)
-		print("New List : ",l)
+Output:
+[10, 20, 30, 40, 50]
+=====================================
 
-	elif choice == 3:
-		element = int(input("Enter Element which u want to remove form List : "))
-		l.remove(element)
-		print("New List : ",l)
+(17) Sort a list in descending order.
+numbers = [10, 50, 20, 40, 30]numbers.sort(reverse=True)print(numbers)
 
-	elif choice == 4:
-		l.sort()
-		print("Sorted List : ",l)
+Output:
+[50, 40, 30, 20, 10]
+====================================
 
-	elif choice == 5:
-		l2 = l.copy()
-		print("Copy List : ",l2)
-		print("Original List : ",l)
+(18) Create a new list containing only even numbers.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]even = []for num in numbers:    if num % 2 == 0:        even.append(num)print(even)
 
-	elif choice == 6:
-		break
+Output:
+[2, 4, 6, 8, 10]
+===================================
 
-	else :
-		print("Wrong Choice")
+(19) Create a new list containing only odd numbers.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]odd = []for num in numbers:    if num % 2 != 0:        odd.append(num)print(odd)
 
+Output:
+[1, 3, 5, 7, 9]
+===================================
+
+(20) Find the average of all elements.
+numbers = [10, 20, 30, 40, 50]average = sum(numbers) / len(numbers)print("Average:", average)
+
+Output:
+Average: 30.0
+==================================
+
+(21) Create a copy of a list.
+numbers = [10, 20, 30, 40]new_list = numbers.copy()print("Original:", numbers)print("Copy:", new_list)
+
+Output:
+Original: [10, 20, 30, 40]
+Copy: [10, 20, 30, 40]
+==================================
+
+(22) Merge two lists into one list.
+list1 = [10, 20, 30]list2 = [40, 50, 60]result = list1 + list2print(result)
+
+Output:
+[10, 20, 30, 40, 50, 60]
+=================================
+
+(23) Find the second largest element in a list.
+numbers = [10, 50, 30, 80, 60, 40]unique = list(set(numbers))unique.sort()print("Second Largest:", unique[-2])
+
+Output:
+Second Largest: 60
+=================================
+
+(24) Find the second smallest element in a list.
+numbers = [50, 10, 30, 80, 20, 40]unique = list(set(numbers))unique.sort()print("Second Smallest:", unique[1])
+
+Output:
+Second Smallest: 20
+=================================
+
+(25) Remove duplicate elements from a list.
+numbers = [10, 20, 10, 30, 20, 40, 30]result = []for num in numbers:    if num not in result:        result.append(num)print(result)
+
+Output:
+[10, 20, 30, 40]
+=================================
+
+(26) Find the common elements between two lists.
+list1 = [10, 20, 30, 40, 50]list2 = [30, 40, 50, 60, 70]common = []for num in list1:    if num in list2:        common.append(num)print(common)
+
+Output:
+[30, 40, 50]
+================================
+
+(27) Find elements that are present in the first list but not in the second.
+list1 = [10, 20, 30, 40, 50]list2 = [30, 40, 60]result = []for num in list1:    if num not in list2:        result.append(num)print(result)
+
+Output:
+[10, 20, 50]
+================================
+
+(28) Replace all negative numbers with zero.
+numbers = [10, -5, 20, -15, 30, -2]for i in range(len(numbers)):    if numbers[i] < 0:        numbers[i] = 0print(numbers)
+
+Output:
+[10, 0, 20, 0, 30, 0]
+================================
+
+(29) Separate positive and negative numbers.
+numbers = [10, -5, 20, -15, 30, -2, 40]positive = []negative = []for num in numbers:    if num >= 0:        positive.append(num)    else:        negative.append(num)print("Positive:", positive)print("Negative:", negative)
+
+Output:
+Positive: [10, 20, 30, 40]
+Negative: [-5, -15, -2]
+=================================
+
+(30) Find the index of a particular element without using index().
+numbers = [10, 20, 30, 40, 50]target = 40for i in range(len(numbers)):    if numbers[i] == target:        print("Index:", i)        break
+
+Output:
+Index: 3
+=================================
+
+(31) Create a list of squares of numbers from 1 to 10.
+squares = []for num in range(1, 11):    squares.append(num ** 2)print(squares)
+
+Output:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+===================================
+
+(32) Find the frequency of every element in a list.
+numbers = [10, 20, 10, 30, 20, 10, 40]frequency = {}for num in numbers:    if num in frequency:        frequency[num] += 1    else:        frequency[num] = 1print(frequency)
+
+Output:
+{10: 3, 20: 2, 30: 1, 40: 1}
+==================================
+
+(33) Rotate a list one position to the right.
+numbers = [10, 20, 30, 40, 50]last = numbers.pop()numbers.insert(0, last)print(numbers)
+
+Output:
+[50, 10, 20, 30, 40]
+==================================
+
+(34) Rotate a list two positions to the left.
+numbers = [10, 20, 30, 40, 50]k = 2result = numbers[k:] + numbers[:k]print(result)
+
+Output:
+[30, 40, 50, 10, 20]
+==================================
+
+(35) Move all zeros to the end of a list.
+numbers = [0, 10, 0, 20, 30, 0, 40]result = []for num in numbers:    if num != 0:        result.append(num)zero_count = numbers.count(0)result.extend([0] * zero_count)print(result)
+
+Output:
+[10, 20, 30, 40, 0, 0, 0]
+==================================
+
+(36) Find the missing number from a list containing numbers from 1 to 10.
+numbers = [1, 2, 3, 5, 6, 7, 8, 9, 10]expected_sum = sum(range(1, 11))actual_sum = sum(numbers)missing = expected_sum - actual_sumprint("Missing Number:", missing)
+
+Output:
+Missing Number: 4
+=================================
+
+(37) Find all pairs whose sum equals a given target.
+numbers = [2, 4, 3, 5, 7, 8, 1]target = 9for i in range(len(numbers)):    for j in range(i + 1, len(numbers)):        if numbers[i] + numbers[j] == target:            print(numbers[i], numbers[j])
+
+Output:
+2 7
+4 5
+8 1
+=================================
+
+(38) Find the difference between the largest and smallest elements.
+numbers = [45, 12, 89, 34, 67]difference = max(numbers) - min(numbers)print("Difference:", difference)
+
+Output:
+Difference: 77
+=================================
+
+(39) Split a list into two equal parts.
+numbers = [10, 20, 30, 40, 50, 60]mid = len(numbers) // 2first = numbers[:mid]second = numbers[mid:]print("First Half:", first)print("Second Half:", second)
+
+Output:
+First Half: [10, 20, 30]
+Second Half: [40, 50, 60]
+=================================
+
+(40) Flatten a nested list containing two levels.
+numbers = [[1, 2], [3, 4], [5, 6]]result = []for sublist in numbers:    for num in sublist:        result.append(num)print(result)
+
+Output:
+[1, 2, 3, 4, 5, 6]
+================================
+
+(41) Find the maximum sum of two consecutive elements.
+numbers = [10, 20, 5, 30, 15, 25]max_sum = numbers[0] + numbers[1]for i in range(len(numbers) - 1):    current = numbers[i] + numbers[i + 1]    if current > max_sum:        max_sum = currentprint("Maximum Pair Sum:", max_sum)
+
+Output:
+Maximum Pair Sum: 45
+===============================
+
+(42) Check whether a list is a palindrome.
+numbers = [10, 20, 30, 20, 10]if numbers == numbers[::-1]:    print("Palindrome List")else:    print("Not a Palindrome")
+
+Output:
+Palindrome List
+===============================
+
+(43) Find the longest word in a list of strings.
+words = ["Python", "Programming", "Java", "Developer", "C"]longest = words[0]for word in words:    if len(word) > len(longest):        longest = wordprint("Longest Word:", longest)
+
+Output:
+Longest Word: Programming
+===============================
+
+(44) Sort a list without using sort() or sorted().
+numbers = [50, 20, 40, 10, 30]for i in range(len(numbers)):    for j in range(i + 1, len(numbers)):        if numbers[i] > numbers[j]:            numbers[i], numbers[j] = numbers[j], numbers[i]print(numbers)
+
+Output:
+[10, 20, 30, 40, 50]
+===============================
+
+(45) Find the elements that appear more than once.
+numbers = [10, 20, 30, 10, 40, 20, 50, 30]duplicates = []for num in numbers:    if numbers.count(num) > 1 and num not in duplicates:        duplicates.append(num)print(duplicates)
+
+Output:
+[10, 20, 30]
+===============================
+
+(46) Create a list containing cumulative sums.
+numbers = [10, 20, 30, 40, 50]result = []total = 0for num in numbers:    total += num    result.append(total)print(result)
+
+Output:
+[10, 30, 60, 100, 150]
+===============================
+
+(47) Find the longest increasing consecutive sequence.
+numbers = [1, 2, 3, 1, 2, 5, 6, 7, 2]longest = []current = [numbers[0]]for i in range(1, len(numbers)):    if numbers[i] > numbers[i - 1]:        current.append(numbers[i])    else:        if len(current) > len(longest):            longest = current        current = [numbers[i]]if len(current) > len(longest):    longest = currentprint("Longest Sequence:", longest)
+
+Output:
+Longest Sequence: [1, 2, 5, 6, 7]
+===============================
+
+(48) Find the intersection of two lists without duplicate elements.
+list1 = [10, 20, 20, 30, 40, 50]list2 = [20, 20, 40, 60, 70]result = []for num in list1:    if num in list2 and num not in result:        result.append(num)print(result)
+
+Output:
+[20, 40]
+===============================
+
+(49) Find the product of all elements without using a library.
+numbers = [2, 3, 4, 5]product = 1for num in numbers:    product *= numprint("Product:", product)
+
+Output:
+Product: 120
+===============================
+
+(50) Find the element that occurs only once in a list where all other elements occur twice.
+numbers = [10, 20, 30, 20, 40, 10, 30]for num in numbers:    if numbers.count(num) == 1:        print("Unique Element:", num)        break
+
+Output:
+Unique Element: 40
+==============================
+
+(51) Student Marks Management System using Lists.
+Question: Create a Python program that stores the marks of five students in a list. Calculate the total marks, average marks, highest marks, lowest marks, and count how many students passed. Passing marks are 40.
+marks = [85, 35, 92, 45, 28]total = sum(marks)average = total / len(marks)highest = max(marks)lowest = min(marks)passed = 0failed = 0for mark in marks:    if mark >= 40:        passed += 1    else:        failed += 1print("Student Marks:", marks)print("Total Marks:", total)print("Average Marks:", average)print("Highest Marks:", highest)print("Lowest Marks:", lowest)print("Passed Students:", passed)print("Failed Students:", failed)
+
+Output:
+Student Marks: [85, 35, 92, 45, 28]
+Total Marks: 285
+Average Marks: 57.0
+Highest Marks: 92
+Lowest Marks: 28
+Passed Students: 3
+Failed Students: 2
+==============================
 
